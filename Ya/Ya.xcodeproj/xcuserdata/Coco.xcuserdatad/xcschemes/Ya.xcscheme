@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCFC2C711A2C7DE600DA9B82"
+               BlueprintIdentifier = "CCFC2CA31A2C865C00DA9B82"
                BuildableName = "Ya.app"
                BlueprintName = "Ya"
                ReferencedContainer = "container:Ya.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCFC2C8A1A2C7DEA00DA9B82"
+               BlueprintIdentifier = "CCFC2CBC1A2C865C00DA9B82"
                BuildableName = "YaTests.xctest"
                BlueprintName = "YaTests"
                ReferencedContainer = "container:Ya.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCFC2C8A1A2C7DEA00DA9B82"
+               BlueprintIdentifier = "CCFC2CBC1A2C865C00DA9B82"
                BuildableName = "YaTests.xctest"
                BlueprintName = "YaTests"
                ReferencedContainer = "container:Ya.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCFC2C711A2C7DE600DA9B82"
+            BlueprintIdentifier = "CCFC2CA31A2C865C00DA9B82"
             BuildableName = "Ya.app"
             BlueprintName = "Ya"
             ReferencedContainer = "container:Ya.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCFC2C711A2C7DE600DA9B82"
+            BlueprintIdentifier = "CCFC2CA31A2C865C00DA9B82"
             BuildableName = "Ya.app"
             BlueprintName = "Ya"
             ReferencedContainer = "container:Ya.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCFC2C711A2C7DE600DA9B82"
+            BlueprintIdentifier = "CCFC2CA31A2C865C00DA9B82"
             BuildableName = "Ya.app"
             BlueprintName = "Ya"
             ReferencedContainer = "container:Ya.xcodeproj">
