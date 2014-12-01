@@ -1,5 +1,5 @@
-Tiffies
-=======
+LifeSpice
+=========
 
 
-© 2014 Tiffie's. All rights reserved.
+© 2014 LifeSpice Design. All rights reserved.
