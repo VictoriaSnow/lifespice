@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>38A3D610-EFE4-4E34-8EBC-0EF4F07CF32B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ya</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C116930FC5C646B37B42D0CAA66805758B37715E</key>
+		<string>https://github.com/VictoriaSnow/Tiffies.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ya-Swift/Ya/Ya.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C116930FC5C646B37B42D0CAA66805758B37715E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/VictoriaSnow/Tiffies.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C116930FC5C646B37B42D0CAA66805758B37715E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C116930FC5C646B37B42D0CAA66805758B37715E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LifeSpice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
