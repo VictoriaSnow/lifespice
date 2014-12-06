@@ -15,6 +15,8 @@ class ListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 70
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "city-blur-copy"))
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -64,6 +66,15 @@ class ListTableViewController: UITableViewController {
         var dt = data.valueForKeyPath("date") as String
         var inf = data.valueForKeyPath("info") as String
         cell.detailTextLabel?.text = "\(dt) - \(inf)"
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor.clearColor()
+        } else {
+            cell.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
+            cell.textLabel.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
+            cell.detailTextLabel?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
+        }
+        cell.textLabel.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }

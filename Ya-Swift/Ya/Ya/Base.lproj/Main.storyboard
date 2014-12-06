@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="h4Y-eR-mEM" detailTextLabel="8u4-EE-gMv" style="IBUITableViewCellStyleSubtitle" id="8aO-If-adc">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="h4Y-eR-mEM" detailTextLabel="8u4-EE-gMv" style="IBUITableViewCellStyleSubtitle" id="8aO-If-adc">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8aO-If-adc" id="JZe-wN-MSs">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -61,7 +61,7 @@
                         <viewControllerLayoutGuide type="top" id="QcE-0R-Qy4"/>
                         <viewControllerLayoutGuide type="bottom" id="vjO-A7-lwE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mHI-gC-fJr">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="mHI-gC-fJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -81,7 +81,6 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Item" id="Bce-2j-8I8">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gdu-bv-szf">
@@ -95,6 +94,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="textFieldDate" destination="Dlj-dI-jc7" id="tlY-XD-yOw"/>
                         <outlet property="textFieldInfo" destination="TVG-fc-ftg" id="weH-kM-PBJ"/>

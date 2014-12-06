@@ -18,6 +18,8 @@ class ItemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        let imageName = "city.jpg"
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: imageName)!)
     }
 
     @IBAction func saveTapped(sender: AnyObject) {
