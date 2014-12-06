@@ -21,6 +21,22 @@ class ItemViewController: UIViewController {
 //        let imageName = "city.jpg"
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: imageName)!)
     }
+    
+    
+    @IBAction func updateDate(sender: UITextField)
+    {
+        var datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action:Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+    
+    }
+    
+    func handleDatePicker(sender:UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        textFieldDate.text = dateFormatter.stringFromDate(sender.date)
+    }
 
     @IBAction func saveTapped(sender: AnyObject) {
         // Reference to our app delegate
