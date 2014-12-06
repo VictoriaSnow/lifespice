@@ -21,9 +21,19 @@ class ItemViewController: UIViewController {
     }
     
     
-    @IBAction func updateDate(sender: AnyObject) {
-        UIDatePicker *picker = (UIDatePicker*)textFieldDate.inputView;
-        UIFieldDate.text = [NSString stringWithFormat:@ "%",picker.date]
+    @IBAction func updateDate(sender: UITextField)
+    {
+        var datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action:Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+    
+    }
+    
+    func handleDatePicker(sender:UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        textFieldDate.text = dateFormatter.stringFromDate(sender.date)
     }
 
     @IBAction func saveTapped(sender: AnyObject) {
