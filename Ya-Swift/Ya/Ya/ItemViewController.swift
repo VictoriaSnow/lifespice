@@ -19,6 +19,12 @@ class ItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func updateDate(sender: AnyObject) {
+        UIDatePicker *picker = (UIDatePicker*)textFieldDate.inputView;
+        UIFieldDate.text = [NSString stringWithFormat:@ "%",picker.date]
+    }
 
     @IBAction func saveTapped(sender: AnyObject) {
         // Reference to our app delegate
