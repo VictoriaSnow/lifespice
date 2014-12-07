@@ -62,7 +62,7 @@ class ListTableViewController: UITableViewController {
         
         var data: NSManagedObject = myList[ip.row] as NSManagedObject
         
-        cell.textLabel.text = data.valueForKeyPath("item") as? String
+        cell.textLabel?.text = data.valueForKeyPath("item") as? String
         var dt = data.valueForKeyPath("date") as String
         var inf = data.valueForKeyPath("info") as String
         cell.detailTextLabel?.text = "\(dt) - \(inf)"
@@ -70,10 +70,10 @@ class ListTableViewController: UITableViewController {
             cell.backgroundColor = UIColor.clearColor()
         } else {
             cell.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
-            cell.textLabel.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
+            cell.textLabel?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
             cell.detailTextLabel?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
         }
-        cell.textLabel.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
         
         return cell
