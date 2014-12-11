@@ -60,7 +60,7 @@ class ItemViewController: UIViewController {
         
         // Save our context
         contxt.save(nil)
-        println(newItem)
+        println(newItem.date)
         
         // Navigate back to root view controller
         

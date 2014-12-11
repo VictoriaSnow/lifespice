@@ -1,5 +1,5 @@
 //
-//  ListTableViewController.swift
+//  CenterViewController.swift
 //  Ya
 //
 //  Created by Victoria Bian on 12/2/14.
@@ -9,14 +9,30 @@
 import UIKit
 import CoreData
 
-class ListTableViewController: UITableViewController {
+@objc
+
+protocol CenterViewControllerDelegate {
+    optional func toggleLeftPanel()
+    optional func toggleRightPanel()
+    optional func collapseSidePanels()
+}
+
+class CenterViewController: UITableViewController, SidePanelViewControllerDelegate {
+    
+
+    @IBOutlet weak private var imageView: UIImageView!
+
+    @IBOutlet weak var titleLabel: UINavigationItem!
+
+    
+    var delegate: CenterViewControllerDelegate?
     
     var myList : Array<AnyObject> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 70
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "city-blur-copy"))
+//        self.tableView.backgroundView = UIImageView(image: UIImage(named: "city-blur-copy"))
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -35,6 +51,23 @@ class ListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: Button actions
+
+    
+    @IBAction func categoriesTapped(sender: AnyObject) {
+    
+
+        delegate?.toggleLeftPanel?()
+    }
+    
+    func categorySelected(category: Category) {
+//        imageView.image = category.image
+        titleLabel.title = category.title
+        
+        delegate?.collapseSidePanels?()
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,15 +99,15 @@ class ListTableViewController: UITableViewController {
         var dt = data.valueForKeyPath("date") as String
         var inf = data.valueForKeyPath("info") as String
         cell.detailTextLabel?.text = "\(dt) - \(inf)"
-        if (indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor.clearColor()
-        } else {
-            cell.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
-            cell.textLabel?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
-            cell.detailTextLabel?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.0)
-        }
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+////        if (indexPath.row % 2 == 0) {
+////            cell.backgroundColor = UIColor.clearColor()
+////        } else {
+//            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+//            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+//            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+////        }
+//        cell.textLabel?.textColor = UIColor.whiteColor()
+//        cell.detailTextLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }
