@@ -1,5 +1,5 @@
 //
-//  ItemViewController.swift
+//  AddItemViewController.swift
 //  Ya
 //
 //  Created by Victoria Bian on 12/2/14.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemViewController: UIViewController {
+class AddItemViewController: UIViewController {
 
     @IBOutlet var textFieldItem: UITextField!
     @IBOutlet var textFieldDate: UITextField!

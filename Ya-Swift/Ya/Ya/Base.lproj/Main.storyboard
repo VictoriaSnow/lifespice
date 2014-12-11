@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="939.5" y="338.5"/>
         </scene>
-        <!--Item View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="zm1-eh-eJV">
             <objects>
-                <viewController storyboardIdentifier="ItemViewController" title="Item View Controller" modalTransitionStyle="crossDissolve" id="dT2-bV-vme" customClass="ItemViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItemViewController" title="Add Item View Controller" modalTransitionStyle="crossDissolve" id="dT2-bV-vme" customClass="AddItemViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QcE-0R-Qy4"/>
                         <viewControllerLayoutGuide type="bottom" id="vjO-A7-lwE"/>

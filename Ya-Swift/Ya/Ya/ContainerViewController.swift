@@ -12,7 +12,6 @@ import QuartzCore
 enum SlideOutState {
     case BothCollapsed
     case LeftPanelExpanded
-    case RightPanelExpanded
 }
 
 class ContainerViewController: UIViewController, CenterViewControllerDelegate, UIGestureRecognizerDelegate {
@@ -56,13 +55,9 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         animateLeftPanel(shouldExpand: notAlreadyExpanded)
     }
     
-    func toggleRightPanel() {
-    }
     
     func collapseSidePanels() {
         switch (currentState) {
-        case .RightPanelExpanded:
-            toggleRightPanel()
         case .LeftPanelExpanded:
             toggleLeftPanel()
         default:
@@ -79,6 +74,8 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         }
     }
     
+
+    
     func addChildSidePanelController(sidePanelController: SidePanelViewController) {
         sidePanelController.delegate = centerViewController
         
@@ -88,8 +85,6 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         sidePanelController.didMoveToParentViewController(self)
     }
     
-    func addRightPanelViewController() {
-    }
     
     func animateLeftPanel(#shouldExpand: Bool) {
         if (shouldExpand) {
@@ -112,8 +107,6 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
             }, completion: completion)
     }
     
-    func animateRightPanel(#shouldExpand: Bool) {
-    }
     
     func showShadowForCenterViewController(shouldShowShadow: Bool) {
         if (shouldShowShadow) {
@@ -132,8 +125,6 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
             if (currentState == .BothCollapsed) {
                 if (gestureIsDraggingFromLeftToRight) {
                     addLeftPanelViewController()
-                } else {
-                    addRightPanelViewController()
                 }
                 
                 showShadowForCenterViewController(true)
@@ -158,10 +149,6 @@ private extension UIStoryboard {
     
     class func leftViewController() -> SidePanelViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? SidePanelViewController
-    }
-    
-    class func rightViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? SidePanelViewController
     }
     
     class func centerViewController() -> CenterViewController? {
