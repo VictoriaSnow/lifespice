@@ -183,31 +183,6 @@
             </objects>
             <point key="canvasLocation" x="1790.5" y="338.5"/>
         </scene>
-        <!--Category Name-->
-        <scene sceneID="9QU-jN-yBo">
-            <objects>
-                <viewController id="5oq-Dn-t7O" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CzE-BM-MEO"/>
-                        <viewControllerLayoutGuide type="bottom" id="CfN-cP-LSw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4aZ-T7-B1Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Category Name" id="tVY-TI-c6I">
-                        <barButtonItem key="leftBarButtonItem" title="Categories" id="UTF-xF-klp">
-                            <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="98Q-jh-W1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2229.5" y="338.5"/>
-        </scene>
         <!--Show Item View-->
         <scene sceneID="Mfo-kh-bGZ">
             <objects>
