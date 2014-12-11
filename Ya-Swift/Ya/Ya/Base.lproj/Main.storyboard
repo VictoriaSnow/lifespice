@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="List_header" id="hfd-Yy-FAI">
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" id="hfd-Yy-FAI">
                             <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -30,6 +30,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="V3s-IE-sR9" kind="show" id="G8A-72-iHx"/>
                                 </connections>
@@ -194,11 +195,6 @@
                     <view key="view" contentMode="scaleToFill" id="m1r-3c-xTZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="3vE-YC-STx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
@@ -258,8 +254,7 @@
     </scenes>
     <resources>
         <image name="Header" width="750" height="400"/>
-        <image name="List_header" width="750" height="600"/>
-        <image name="city" width="900" height="1600"/>
+        <image name="profile" width="750" height="600"/>
     </resources>
     <color key="tintColor" red="0.43137254901960786" green="0.32941176470588235" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

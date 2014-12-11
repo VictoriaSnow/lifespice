@@ -32,7 +32,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 70
-//        self.tableView.backgroundView = UIImageView(image: UIImage(named: "city-blur-copy"))
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -102,9 +102,9 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
 ////        if (indexPath.row % 2 == 0) {
 ////            cell.backgroundColor = UIColor.clearColor()
 ////        } else {
-//            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
-//            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
-//            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.9)
+            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
 ////        }
 //        cell.textLabel?.textColor = UIColor.whiteColor()
 //        cell.detailTextLabel?.textColor = UIColor.whiteColor()
