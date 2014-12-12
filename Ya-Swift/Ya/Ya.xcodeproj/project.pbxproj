@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3598284C1A3B197900F0F6B0 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598284B1A3B197900F0F6B0 /* DatePickerViewController.swift */; };
 		CC21E98A1A3AE27C00231C28 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21E9891A3AE27C00231C28 /* EditItemViewController.swift */; };
 		CC8FC9CE1A39B26600EC6511 /* ShowItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FC9CD1A39B26600EC6511 /* ShowItemViewController.swift */; };
 		CCADE0F61A39875400F93839 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADE0F51A39875400F93839 /* SidePanelViewController.swift */; };
@@ -35,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3598284B1A3B197900F0F6B0 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		CC21E9891A3AE27C00231C28 /* EditItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		CC8FC9CD1A39B26600EC6511 /* ShowItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowItemViewController.swift; sourceTree = "<group>"; };
 		CCADE0F51A39875400F93839 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				CCADE0F51A39875400F93839 /* SidePanelViewController.swift */,
 				CCADE0F71A39878900F93839 /* Category.swift */,
 				CCADE0F91A3987B900F93839 /* ContainerViewController.swift */,
-				3598284B1A3B197900F0F6B0 /* DatePickerViewController.swift */,
 				CCE872171A2ECB3F009FA649 /* AddItemViewController.swift */,
 				CC21E9891A3AE27C00231C28 /* EditItemViewController.swift */,
 				CC8FC9CD1A39B26600EC6511 /* ShowItemViewController.swift */,
@@ -241,7 +238,6 @@
 				CCADE0F61A39875400F93839 /* SidePanelViewController.swift in Sources */,
 				CCE8721A1A2ECB8E009FA649 /* Model.swift in Sources */,
 				CCADE0FA1A3987B900F93839 /* ContainerViewController.swift in Sources */,
-				3598284C1A3B197900F0F6B0 /* DatePickerViewController.swift in Sources */,
 				CCE872161A2ECAB7009FA649 /* CenterViewController.swift in Sources */,
 				CCE872181A2ECB3F009FA649 /* AddItemViewController.swift in Sources */,
 				CCADE0F81A39878900F93839 /* Category.swift in Sources */,

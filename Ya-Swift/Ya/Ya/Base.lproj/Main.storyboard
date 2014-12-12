@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z2V-4E-cgR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z2V-4E-cgR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -612,33 +612,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nx-0x-Cuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1375.5" y="1112.5"/>
-        </scene>
-        <!--Date Picker View Controller-->
-        <scene sceneID="GjJ-dK-3zA">
-            <objects>
-                <viewController id="PdO-Rf-Dfo" customClass="DatePickerViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ENC-7F-pun"/>
-                        <viewControllerLayoutGuide type="bottom" id="8GN-6Z-wNn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tXb-SE-Xaz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-bB-hAv">
-                                <rect key="frame" x="0.0" y="117" width="375" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="440081004.21019399">
-                                    <!--2014-12-12 12:43:24 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LhY-xk-Qfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="539.5" y="1112.5"/>
         </scene>
     </scenes>
     <resources>
