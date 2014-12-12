@@ -138,6 +138,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="PdO-Rf-Dfo" kind="show" id="jeh-b8-j87"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -386,7 +389,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qbt-W3-Afm">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="2Ih-6O-8gA" kind="show" id="Cm3-3E-3rf"/>
+                                <segue destination="2Ih-6O-8gA" kind="show" identifier="editEvent" id="Cm3-3E-3rf"/>
                             </connections>
                         </barButtonItem>
                         <connections>
