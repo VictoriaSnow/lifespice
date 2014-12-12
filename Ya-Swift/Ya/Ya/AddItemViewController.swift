@@ -14,13 +14,18 @@ class AddItemViewController: UITableViewController {
     @IBOutlet var textFieldTitle: UITextField!
     @IBOutlet var textFieldLocation: UITextField!
     
+    
+    @IBOutlet weak var dateTab: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
 //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
     }
-
+    
+    
+    
     @IBAction func doneTapped(sender: AnyObject) {
                 // Reference to our app delegate
         
@@ -39,7 +44,9 @@ class AddItemViewController: UITableViewController {
         
                 newItem.title = textFieldTitle.text
                 newItem.location = textFieldLocation.text
-//                newItem.info = textFieldInfo.text
+        
+               
+                //                newItem.info = textFieldInfo.text
         
                 // Save our context
                 contxt.save(nil)
@@ -55,6 +62,8 @@ class AddItemViewController: UITableViewController {
     @IBAction func cancelTapped(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
+
+   
 
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()

@@ -1,43 +1,39 @@
 //
-//  ShowItemViewController.swift
+//  DatePickerViewController.swift
 //  Ya
 //
-//  Created by Victoria Bian on 12/11/14.
+//  Created by Jenny Chen on 12/12/14.
 //  Copyright (c) 2014 Lifespice. All rights reserved.
 //
 
-
 import UIKit
-import CoreData
 
-class ShowItemViewController: UIViewController {
-    var itemName:String = ""
-    @IBAction func backTapped(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    }
+class DatePickerViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    
-
-    
-    
+    func convertDate(date:NSDate)-> String {
+        let dateFormatter = NSDateFormatter()
+        return dateFormatter.stringFromDate(date)
+        
+    }
     /*
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
-    
-}
 
+}

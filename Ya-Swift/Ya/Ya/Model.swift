@@ -13,4 +13,5 @@ class Model: NSManagedObject {
     @NSManaged var title: String
     @NSManaged var location: String
     @NSManaged var info: String
+    @NSManaged var date: String
 }
