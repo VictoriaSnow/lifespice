@@ -13,20 +13,24 @@ import CoreData
 class ShowItemViewController: UIViewController {
     @IBOutlet weak var nameDis: UILabel!
     
-    @IBOutlet weak var dateDis: UILabel!
-    @IBOutlet weak var categoryPic: UIImageView!
+    @IBOutlet weak var locationDis: UILabel!
     @IBOutlet weak var detailDis: UILabel!
     @IBAction func backTapped(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryPic.image = UIImage(named:"birthday.png")
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    
+
     
     
     /*
