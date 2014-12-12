@@ -281,11 +281,6 @@
                         </connections>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="dateDis" destination="BDp-Ft-I9T" id="fk1-Fh-lt7"/>
-                        <outlet property="detailDis" destination="gUg-lH-qFt" id="fub-uS-MZo"/>
-                        <outlet property="nameDis" destination="jcY-VO-fGx" id="Ucx-Zx-DuJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pE3-cf-agR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
