@@ -379,7 +379,7 @@
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="My Day" id="JQ4-Pn-KC3">
+                    <navigationItem key="navigationItem" title="My Event" id="JQ4-Pn-KC3">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="rKo-fF-ajY">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -389,7 +389,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qbt-W3-Afm">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="2Ih-6O-8gA" kind="show" id="VPx-DC-Ote"/>
+                                <segue destination="2Ih-6O-8gA" kind="show" id="Cm3-3E-3rf"/>
                             </connections>
                         </barButtonItem>
                         <connections>
@@ -426,10 +426,10 @@
             </objects>
             <point key="canvasLocation" x="539.5" y="338.5"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Edit Item View Controller-->
         <scene sceneID="BFy-bo-kSp">
             <objects>
-                <tableViewController storyboardIdentifier="EditItemViewController" title="Add Item View Controller" id="2Ih-6O-8gA" customClass="EditItemViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EditItemViewController" title="Edit Item View Controller" id="2Ih-6O-8gA" customClass="EditItemViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ora-eh-hDx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -577,20 +577,20 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cLX-5h-SBK">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="cancelTapped:" destination="2Ih-6O-8gA" id="JTS-fn-lfI"/>
+                                <action selector="cancelTapped:" destination="2Ih-6O-8gA" id="cfB-2y-7yn"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="e7T-Id-thu">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="doneTapped:" destination="2Ih-6O-8gA" id="XZq-m5-0vz"/>
+                                <action selector="doneTapped:" destination="2Ih-6O-8gA" id="rkh-0t-5je"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="textFieldLocation" destination="mMh-7O-Yr4" id="Yj8-b7-MXj"/>
-                        <outlet property="textFieldTitle" destination="O1R-g4-qcH" id="LTe-09-dBg"/>
+                        <outlet property="textFieldLocation" destination="mMh-7O-Yr4" id="K2q-J7-kIG"/>
+                        <outlet property="textFieldTitle" destination="O1R-g4-qcH" id="LTy-p2-JUS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nx-0x-Cuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
