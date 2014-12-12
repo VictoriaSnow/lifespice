@@ -9,66 +9,57 @@
 import UIKit
 import CoreData
 
-class AddItemViewController: UIViewController {
+class AddItemViewController: UITableViewController {
 
-    
     @IBOutlet var textFieldTitle: UITextField!
-    
     @IBOutlet var textFieldLocation: UITextField!
-    
-    @IBOutlet var textFieldInfo: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        let yourImage = UIImage(named: "new_york.jpg")
-//        let imageview = UIImageView(image: yourImage)
-//        self.view.addSubview(imageview)
+//                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
     }
 
-
-    @IBAction func saveTapped(sender: AnyObject) {
-        // Reference to our app delegate
+    @IBAction func doneTapped(sender: AnyObject) {
+                // Reference to our app delegate
         
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
-        // Reference moc
+                // Reference moc
         
-        let contxt: NSManagedObjectContext = appDel.managedObjectContext!
-        let en = NSEntityDescription.entityForName("List", inManagedObjectContext: contxt)
+                let contxt: NSManagedObjectContext = appDel.managedObjectContext!
+                let en = NSEntityDescription.entityForName("List", inManagedObjectContext: contxt)
         
-        // Create instance of our data model and intitialize
+                // Create instance of our data model and intitialize
         
-        var newItem = Model(entity: en!, insertIntoManagedObjectContext: contxt)
+                var newItem = Model(entity: en!, insertIntoManagedObjectContext: contxt)
         
-        // Map our properties
+                // Map our properties
         
-        newItem.title = textFieldTitle.text
-        newItem.location = textFieldLocation.text
-        newItem.info = textFieldInfo.text
+                newItem.title = textFieldTitle.text
+                newItem.location = textFieldLocation.text
+//                newItem.info = textFieldInfo.text
         
-        // Save our context
-        contxt.save(nil)
-        println(newItem.title)
-        println(newItem.location)
-        println(newItem.info)
+                // Save our context
+                contxt.save(nil)
+//                println(newItem.title)
+//                println(newItem.location)
+//                println(newItem.info)
         
-        // Navigate back to root view controller
-        
-        self.navigationController?.popToRootViewControllerAnimated(true)
-        
-        
-        
+                // Navigate back to root view controller
+                
+                self.navigationController?.popToRootViewControllerAnimated(true)
     }
+
     @IBAction func cancelTapped(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
 
     /*
