@@ -40,7 +40,6 @@
 		CCADE0F71A39878900F93839 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCADE0F91A3987B900F93839 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		CCE871ED1A2EC690009FA649 /* Ya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ya.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCE871F11A2EC690009FA649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE871F21A2EC690009FA649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE871F51A2EC690009FA649 /* Ya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ya.xcdatamodel; sourceTree = "<group>"; };
 		CCE871FA1A2EC691009FA649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 				CCE871F41A2EC690009FA649 /* Ya.xcdatamodeld */,
 				CCE871F01A2EC690009FA649 /* Supporting Files */,
 				CCE872151A2ECAB7009FA649 /* CenterViewController.swift */,
+				35A5BDB51A3ACC20006EDBCB /* EditItemViewController.swift */,
 				CCADE0F51A39875400F93839 /* SidePanelViewController.swift */,
 				CCADE0F71A39878900F93839 /* Category.swift */,
 				CCADE0F91A3987B900F93839 /* ContainerViewController.swift */,
@@ -114,7 +114,6 @@
 		CCE871F01A2EC690009FA649 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CCE871F11A2EC690009FA649 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

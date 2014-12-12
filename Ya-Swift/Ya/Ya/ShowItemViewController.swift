@@ -11,14 +11,22 @@ import UIKit
 import CoreData
 
 class ShowItemViewController: UIViewController {
-    
+
     @IBAction func backTapped(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    
+
     
     
     /*
