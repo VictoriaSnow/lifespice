@@ -138,6 +138,22 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
     }
     
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.)
+        
+            if (segue.identifier == "showInfo") {
+            var selectedRow = self.tableView.indexPathForSelectedRow()
+                
+            //var data: NSManagedObject = myList[selectedRow] as NSManagedObject
+            
+            var moveVC: ShowItemViewController = segue.destinationViewController as ShowItemViewController
+            //moveVC.itemName = data.valueForKeyPath("title") as String
+            
+            
+        }
+    }
+
 
 
 

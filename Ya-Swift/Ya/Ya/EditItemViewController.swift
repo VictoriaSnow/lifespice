@@ -9,21 +9,29 @@
 import UIKit
 import CoreData
 
+
 class EditItemViewController: UITableViewController {
+    
+
+
+   
     
  
     @IBOutlet var textFieldTitle: UITextField!
     @IBOutlet var textFieldLocation: UITextField!
+
     var eventTitle: String = ""
     var eventLocation: String = ""
     var existingEvent: NSManagedObject!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
     }
-
+    
+    
     @IBAction func doneTapped(sender: AnyObject) {
     
         // Reference to our app delegate
@@ -43,6 +51,7 @@ class EditItemViewController: UITableViewController {
         
         newItem.title = textFieldTitle.text
         newItem.location = textFieldLocation.text
+        
         //                newItem.info = textFieldInfo.text
         
         // Save our context
@@ -66,6 +75,10 @@ class EditItemViewController: UITableViewController {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
+    
+    
+
 //
 //    
 //    /*
