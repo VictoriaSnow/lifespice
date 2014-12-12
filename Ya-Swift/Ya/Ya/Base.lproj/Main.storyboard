@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="imageView" destination="hfd-Yy-FAI" id="qJO-UA-5s9"/>
                         <outlet property="titleLabel" destination="hxh-ij-KX1" id="hAk-5P-Jwd"/>
+                        <segue destination="2Ih-6O-8gA" kind="show" identifier="edit" id="Shf-hP-XHO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYa-Gu-5ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,7 +364,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FdO-f4-oVR"/>
                         <barButtonItem systemItem="action" id="GC0-RB-QmW">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -373,9 +373,6 @@
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Ht8-nt-9Ai"/>
                         <barButtonItem systemItem="trash" id="GsX-MQ-DgI">
-                            <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TBM-cd-Xb9">
                             <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -620,5 +617,8 @@
         <image name="header_small" width="750" height="130"/>
         <image name="profile" width="750" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cm3-3E-3rf"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.43137254901960786" green="0.32941176470588235" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

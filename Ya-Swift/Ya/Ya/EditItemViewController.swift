@@ -14,6 +14,9 @@ class EditItemViewController: UITableViewController {
  
     @IBOutlet var textFieldTitle: UITextField!
     @IBOutlet var textFieldLocation: UITextField!
+    var eventTitle: String = ""
+    var eventLocation: String = ""
+    var existingEvent: NSManagedObject!
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -28,6 +28,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
     
     var myList : Array<AnyObject> = []
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 70
@@ -53,6 +54,22 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         
         
     }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        // Get the new view controller using [segue destinationViewController].
+//        // Pass the selected object to the new view controller.
+//        if segue.identifier == "edit" {
+//            var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
+//            var selectedItem: NSManagedObject = myList[indexPath.row] as NSManagedObject﻿
+//            let EIVC: EditItemViewController = segue.destinationViewController as EditItemViewController
+//            EIVC.eventTitle = selectedItem.valueForKey("title") as? String!
+//            EIVC.eventLocation = selectedItem.valueForKey("location") as? String!
+//            //            EIVC.info = selectedItem.valueForKey("info") as String
+//            EIVC.existingItem = selectedItem
+//            
+//        }
+//        
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,7 +122,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         
         cell.textLabel?.text = data.valueForKeyPath("title") as? String
         var loc = data.valueForKeyPath("location") as String
-        var inf = data.valueForKeyPath("info") as String
+//        var inf = data.valueForKeyPath("info") as String
         cell.detailTextLabel?.text = "\(loc)"
 ////        if (indexPath.row % 2 == 0) {
 ////            cell.backgroundColor = UIColor.clearColor()
@@ -120,11 +137,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        
-    }
+
 
 
 
