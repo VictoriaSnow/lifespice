@@ -28,7 +28,7 @@ class Category {
             Category(title: "Event",  image: UIImage(named: "event.png")),
             Category(title: "Birthday",  image: UIImage(named: "birthday.png")),
             Category(title: "Holiday", image: UIImage(named: "holiday.png")),
-//            Category(title: "Others", image: UIImage(named: "more.png")),
-            Category(title: "Add more",  image: UIImage(named: "add_more.png"))]
+            Category(title: "Others", image: UIImage(named: "others.png")),
+            Category(title: "Add more",  image: UIImage(named: "more.png"))]
     }
 }

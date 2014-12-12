@@ -20,19 +20,21 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
     var delegate: SidePanelViewControllerDelegate?
     
     var categories: Array<Category>!
-    
+
     struct TableView {
         struct CellIdentifiers {
             static let CategoryCell = "CategoryCell"
         }
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 45
+        self.tableView.rowHeight = 60
         tableView.reloadData()
     }
-    
+
     // MARK: Table View Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

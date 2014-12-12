@@ -11,56 +11,49 @@ import CoreData
 
 class AddItemViewController: UIViewController {
 
-    @IBOutlet var textFieldItem: UITextField!
-    @IBOutlet var textFieldDate: UITextField!
+    
+    @IBOutlet var textFieldTitle: UITextField!
+    
+    @IBOutlet var textFieldLocation: UITextField!
+    
     @IBOutlet var textFieldInfo: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        let imageName = "city.jpg"
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: imageName)!)
+//        let yourImage = UIImage(named: "new_york.jpg")
+//        let imageview = UIImageView(image: yourImage)
+//        self.view.addSubview(imageview)
     }
-    
-    
-    @IBAction func updateDate(sender: UITextField)
-    {
-        var datePickerView : UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.Date
-        sender.inputView = datePickerView
-        datePickerView.addTarget(self, action:Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-    
-    }
-    
-    func handleDatePicker(sender:UIDatePicker) {
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        textFieldDate.text = dateFormatter.stringFromDate(sender.date)
-    }
+
 
     @IBAction func saveTapped(sender: AnyObject) {
         // Reference to our app delegate
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
-        // Reference mac
+        // Reference moc
         
         let contxt: NSManagedObjectContext = appDel.managedObjectContext!
         let en = NSEntityDescription.entityForName("List", inManagedObjectContext: contxt)
         
-        // Create instance of pur data model and intitialize
+        // Create instance of our data model and intitialize
         
         var newItem = Model(entity: en!, insertIntoManagedObjectContext: contxt)
         
         // Map our properties
         
-        newItem.item = textFieldItem.text
-        newItem.date = textFieldItem.text
-        newItem.info = textFieldItem.text
+        newItem.title = textFieldTitle.text
+        newItem.location = textFieldLocation.text
+        newItem.info = textFieldInfo.text
         
         // Save our context
         contxt.save(nil)
-        println(newItem.date)
+        println(newItem.title)
+        println(newItem.location)
+        println(newItem.info)
         
         // Navigate back to root view controller
         

@@ -32,8 +32,17 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         super.viewDidLoad()
         self.tableView.rowHeight = 70
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
+        
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var nav = self.navigationController?.navigationBar
+        nav?.backgroundColor = UIColor.clearColor()
+//        nav?.barStyle = UIBarStyle.BlackTranslucent
+//        nav?.tintColor = UIColor.whiteColor()
+//        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+    }
+    
     override func viewDidAppear(animated: Bool) {
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -94,10 +103,10 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         
         var data: NSManagedObject = myList[ip.row] as NSManagedObject
         
-        cell.textLabel?.text = data.valueForKeyPath("item") as? String
-        var dt = data.valueForKeyPath("date") as String
+        cell.textLabel?.text = data.valueForKeyPath("title") as? String
+        var loc = data.valueForKeyPath("location") as String
         var inf = data.valueForKeyPath("info") as String
-        cell.detailTextLabel?.text = "\(dt) - \(inf)"
+        cell.detailTextLabel?.text = "\(loc)"
 ////        if (indexPath.row % 2 == 0) {
 ////            cell.backgroundColor = UIColor.clearColor()
 ////        } else {
