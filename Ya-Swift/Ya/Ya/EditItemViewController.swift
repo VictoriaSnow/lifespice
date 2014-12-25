@@ -71,10 +71,17 @@ class EditItemViewController: UITableViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
+    func convertDate(date:NSDate)-> String {
+        let dateFormatter = NSDateFormatter()
+        return dateFormatter.stringFromDate(date)
+        
+    }
+    
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
     
     
     

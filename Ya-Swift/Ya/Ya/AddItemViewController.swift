@@ -11,14 +11,22 @@ import CoreData
 
 class AddItemViewController: UITableViewController {
 
+    @IBOutlet weak var dateDis: UILabel!
     @IBOutlet var textFieldTitle: UITextField!
     @IBOutlet var textFieldLocation: UITextField!
     
+    @IBOutlet weak var dateAdd: UIDatePicker!
     
-    @IBOutlet weak var dateTab: UIView!
+    @IBAction func cancel(sender: AnyObject) {
+        dateDis.text = convertDate(dateAdd.date)
+        dateAdd.hidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let now = NSDate()
+        dateAdd.minimumDate = now
+        dateAdd.hidden = true
         
         // Do any additional setup after loading the view.
 //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
@@ -45,7 +53,7 @@ class AddItemViewController: UITableViewController {
                 newItem.title = textFieldTitle.text
                 newItem.location = textFieldLocation.text
         
-               
+               newItem.date = convertDate(dateAdd.date)
                 //                newItem.info = textFieldInfo.text
         
                 // Save our context
@@ -61,6 +69,12 @@ class AddItemViewController: UITableViewController {
 
     @IBAction func cancelTapped(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func convertDate(date:NSDate)-> String {
+        let dateFormatter = NSDateFormatter()
+        return dateFormatter.stringFromDate(date)
+        
     }
 
    
