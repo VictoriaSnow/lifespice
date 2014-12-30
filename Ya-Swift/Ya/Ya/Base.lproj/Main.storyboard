@@ -119,28 +119,21 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="pxn-vn-RQF" detailTextLabel="Bs6-L8-iKG" style="IBUITableViewCellStyleValue1" id="cuL-mt-oiA">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p8M-lg-5BS">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cuL-mt-oiA" id="l6H-PU-9zb">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p8M-lg-5BS" id="6q4-21-6WK">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pxn-vn-RQF">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-dG-kz3">
+                                                    <rect key="frame" x="15" y="7" width="352" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bs6-L8-iKG">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="dateDis:" destination="DrH-9S-ONE" eventType="editingDidBegin" id="6Hf-W4-jSf"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="PdO-Rf-Dfo" kind="show" id="jeh-b8-j87"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -248,6 +241,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="textFieldDate" destination="9ZL-dG-kz3" id="Ss6-B9-Q3l"/>
                         <outlet property="textFieldLocation" destination="LES-B1-xMR" id="0Jy-Wn-cda"/>
                         <outlet property="textFieldTitle" destination="GSL-wB-oCV" id="nHH-Lm-fD4"/>
                     </connections>
@@ -463,23 +457,19 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="UNk-fz-Fkt" detailTextLabel="AcT-od-DIt" style="IBUITableViewCellStyleValue1" id="RVo-Ab-nTU">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="826-ct-mfo">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RVo-Ab-nTU" id="sia-2Z-gMa">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="826-ct-mfo" id="TWB-IO-ITh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UNk-fz-Fkt">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CX4-hX-iM2">
+                                                    <rect key="frame" x="15" y="7" width="352" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AcT-od-DIt">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="dateDis:" destination="2Ih-6O-8gA" eventType="editingDidEnd" id="kKj-Gm-eRk"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -608,6 +598,7 @@
                     <keyCommands/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="textFieldDate" destination="CX4-hX-iM2" id="jAR-xm-85b"/>
                         <outlet property="textFieldLocation" destination="mMh-7O-Yr4" id="K2q-J7-kIG"/>
                         <outlet property="textFieldTitle" destination="O1R-g4-qcH" id="LTy-p2-JUS"/>
                     </connections>
@@ -616,40 +607,13 @@
             </objects>
             <point key="canvasLocation" x="1375.5" y="1112.5"/>
         </scene>
-        <!--Date Picker View Controller-->
-        <scene sceneID="GjJ-dK-3zA">
-            <objects>
-                <viewController id="PdO-Rf-Dfo" customClass="DatePickerViewController" customModule="Ya" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ENC-7F-pun"/>
-                        <viewControllerLayoutGuide type="bottom" id="8GN-6Z-wNn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tXb-SE-Xaz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-bB-hAv">
-                                <rect key="frame" x="0.0" y="261" width="375" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="440081004.21019399">
-                                    <!--2014-12-12 12:43:24 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LhY-xk-Qfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="539.5" y="1112.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="header_small" width="750" height="130"/>
         <image name="profile" width="750" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cm3-3E-3rf"/>
+        <segue reference="Shf-hP-XHO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.43137254901960786" green="0.32941176470588235" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

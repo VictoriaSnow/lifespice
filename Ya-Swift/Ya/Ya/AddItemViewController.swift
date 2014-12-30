@@ -11,22 +11,31 @@ import CoreData
 
 class AddItemViewController: UITableViewController {
 
-    @IBOutlet weak var dateDis: UILabel!
+   
     @IBOutlet var textFieldTitle: UITextField!
     @IBOutlet var textFieldLocation: UITextField!
     
-    @IBOutlet weak var dateAdd: UIDatePicker!
+    @IBOutlet weak var textFieldDate: UITextField!
     
-    @IBAction func cancel(sender: AnyObject) {
-        dateDis.text = convertDate(dateAdd.date)
-        dateAdd.hidden = true
+    func handleDatePicker(sender: UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        textFieldDate.text = dateFormatter.stringFromDate(sender.date)
     }
+   
+    @IBAction func dateDis(sender: UITextField) {
+        var datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents:UIControlEvents.ValueChanged)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let now = NSDate()
-        dateAdd.minimumDate = now
-        dateAdd.hidden = true
+        //let now = NSDate()
+        //dateAdd.minimumDate = now
+        //dateAdd.hidden = true
         
         // Do any additional setup after loading the view.
 //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
@@ -53,7 +62,7 @@ class AddItemViewController: UITableViewController {
                 newItem.title = textFieldTitle.text
                 newItem.location = textFieldLocation.text
         
-               newItem.date = convertDate(dateAdd.date)
+                newItem.date = textFieldDate.text
                 //                newItem.info = textFieldInfo.text
         
                 // Save our context

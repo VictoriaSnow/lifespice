@@ -14,6 +14,7 @@ class EditItemViewController: UITableViewController {
     
 
 
+    @IBOutlet weak var textFieldDate: UITextField!
    
     
  
@@ -23,6 +24,20 @@ class EditItemViewController: UITableViewController {
     var eventTitle: String = ""
     var eventLocation: String = ""
     var existingEvent: NSManagedObject!
+
+    @IBAction func dateDis(sender: UITextField) {
+        var datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents:UIControlEvents.ValueChanged)
+    }
+    
+    
+    func handleDatePicker(sender: UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        textFieldDate.text = dateFormatter.stringFromDate(sender.date)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
