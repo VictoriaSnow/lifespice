@@ -2,4 +2,4 @@ Lifespice
 =========
 
 
-© 2014 Life Spice Designs. All rights reserved.
+© 2015 Lifespice Designs. All rights reserved.
