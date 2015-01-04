@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C3AD76B4-22BC-4E18-8A2A-68C0B9142EF1</string>
+	<string>5BDC9EAA-106F-4D42-B104-C43D63006709</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Lifespice</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>048B2E6F9E1AE2D1979D130C3B13980D9BFA3C7F</key>
-		<string>https://github.com/VictoriaSnow/Treehouse.git</string>
+		<key>C116930FC5C646B37B42D0CAA66805758B37715E</key>
+		<string>https://github.com/VictoriaSnow/Tiffies.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Lifespice/Lifespice.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>048B2E6F9E1AE2D1979D130C3B13980D9BFA3C7F</key>
+		<key>C116930FC5C646B37B42D0CAA66805758B37715E</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/VictoriaSnow/Treehouse.git</string>
+	<string>https://github.com/VictoriaSnow/Tiffies.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>048B2E6F9E1AE2D1979D130C3B13980D9BFA3C7F</string>
+	<string>C116930FC5C646B37B42D0CAA66805758B37715E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>048B2E6F9E1AE2D1979D130C3B13980D9BFA3C7F</string>
+			<string>C116930FC5C646B37B42D0CAA66805758B37715E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Treehouse</string>
+			<string>lifespice</string>
 		</dict>
 	</array>
 </dict>

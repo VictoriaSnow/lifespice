@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC0EB3BD1A586B16001F9A2E"
+               BlueprintIdentifier = "CC0EB3F01A58C4E5001F9A2E"
                BuildableName = "Lifespice.app"
                BlueprintName = "Lifespice"
                ReferencedContainer = "container:Lifespice.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC0EB3D71A586B17001F9A2E"
+               BlueprintIdentifier = "CC0EB40A1A58C4E5001F9A2E"
                BuildableName = "LifespiceTests.xctest"
                BlueprintName = "LifespiceTests"
                ReferencedContainer = "container:Lifespice.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC0EB3D71A586B17001F9A2E"
+               BlueprintIdentifier = "CC0EB40A1A58C4E5001F9A2E"
                BuildableName = "LifespiceTests.xctest"
                BlueprintName = "LifespiceTests"
                ReferencedContainer = "container:Lifespice.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC0EB3BD1A586B16001F9A2E"
+            BlueprintIdentifier = "CC0EB3F01A58C4E5001F9A2E"
             BuildableName = "Lifespice.app"
             BlueprintName = "Lifespice"
             ReferencedContainer = "container:Lifespice.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC0EB3BD1A586B16001F9A2E"
+            BlueprintIdentifier = "CC0EB3F01A58C4E5001F9A2E"
             BuildableName = "Lifespice.app"
             BlueprintName = "Lifespice"
             ReferencedContainer = "container:Lifespice.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC0EB3BD1A586B16001F9A2E"
+            BlueprintIdentifier = "CC0EB3F01A58C4E5001F9A2E"
             BuildableName = "Lifespice.app"
             BlueprintName = "Lifespice"
             ReferencedContainer = "container:Lifespice.xcodeproj">

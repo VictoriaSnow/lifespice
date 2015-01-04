@@ -7,50 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC0EB3C41A586B16001F9A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3C31A586B16001F9A2E /* AppDelegate.swift */; };
-		CC0EB3C71A586B16001F9A2E /* Lifespice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3C51A586B16001F9A2E /* Lifespice.xcdatamodeld */; };
-		CC0EB3C91A586B16001F9A2E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3C81A586B16001F9A2E /* MasterViewController.swift */; };
-		CC0EB3CB1A586B17001F9A2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3CA1A586B17001F9A2E /* DetailViewController.swift */; };
-		CC0EB3CE1A586B17001F9A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB3CC1A586B17001F9A2E /* Main.storyboard */; };
-		CC0EB3D01A586B17001F9A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB3CF1A586B17001F9A2E /* Images.xcassets */; };
-		CC0EB3D31A586B17001F9A2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB3D11A586B17001F9A2E /* LaunchScreen.xib */; };
-		CC0EB3DF1A586B17001F9A2E /* LifespiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3DE1A586B17001F9A2E /* LifespiceTests.swift */; };
+		CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */; };
+		CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */; };
+		CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */; };
+		CC0EB3FE1A58C4E5001F9A2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */; };
+		CC0EB4011A58C4E5001F9A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */; };
+		CC0EB4031A58C4E5001F9A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4021A58C4E5001F9A2E /* Images.xcassets */; };
+		CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */; };
+		CC0EB4121A58C4E5001F9A2E /* LifespiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CC0EB3D91A586B17001F9A2E /* PBXContainerItemProxy */ = {
+		CC0EB40C1A58C4E5001F9A2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CC0EB3B61A586B16001F9A2E /* Project object */;
+			containerPortal = CC0EB3E91A58C4E5001F9A2E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CC0EB3BD1A586B16001F9A2E;
+			remoteGlobalIDString = CC0EB3F01A58C4E5001F9A2E;
 			remoteInfo = Lifespice;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC0EB3BE1A586B16001F9A2E /* Lifespice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifespice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0EB3C21A586B16001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC0EB3C31A586B16001F9A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC0EB3C61A586B16001F9A2E /* Lifespice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lifespice.xcdatamodel; sourceTree = "<group>"; };
-		CC0EB3C81A586B16001F9A2E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		CC0EB3CA1A586B17001F9A2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CC0EB3CD1A586B17001F9A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC0EB3CF1A586B17001F9A2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CC0EB3D21A586B17001F9A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CC0EB3D81A586B17001F9A2E /* LifespiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifespiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0EB3DD1A586B17001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC0EB3DE1A586B17001F9A2E /* LifespiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespiceTests.swift; sourceTree = "<group>"; };
+		CC0EB3F11A58C4E5001F9A2E /* Lifespice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifespice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0EB3F51A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC0EB3F91A58C4E5001F9A2E /* Lifespice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lifespice.xcdatamodel; sourceTree = "<group>"; };
+		CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CC0EB4001A58C4E5001F9A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC0EB4021A58C4E5001F9A2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC0EB4051A58C4E5001F9A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CC0EB40B1A58C4E5001F9A2E /* LifespiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifespiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0EB4101A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC0EB3BB1A586B16001F9A2E /* Frameworks */ = {
+		CC0EB3EE1A58C4E5001F9A2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC0EB3D51A586B17001F9A2E /* Frameworks */ = {
+		CC0EB4081A58C4E5001F9A2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,60 +60,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC0EB3B51A586B16001F9A2E = {
+		CC0EB3E81A58C4E5001F9A2E = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3C01A586B16001F9A2E /* Lifespice */,
-				CC0EB3DB1A586B17001F9A2E /* LifespiceTests */,
-				CC0EB3BF1A586B16001F9A2E /* Products */,
+				CC0EB3F31A58C4E5001F9A2E /* Lifespice */,
+				CC0EB40E1A58C4E5001F9A2E /* LifespiceTests */,
+				CC0EB3F21A58C4E5001F9A2E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CC0EB3BF1A586B16001F9A2E /* Products */ = {
+		CC0EB3F21A58C4E5001F9A2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3BE1A586B16001F9A2E /* Lifespice.app */,
-				CC0EB3D81A586B17001F9A2E /* LifespiceTests.xctest */,
+				CC0EB3F11A58C4E5001F9A2E /* Lifespice.app */,
+				CC0EB40B1A58C4E5001F9A2E /* LifespiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC0EB3C01A586B16001F9A2E /* Lifespice */ = {
+		CC0EB3F31A58C4E5001F9A2E /* Lifespice */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3C31A586B16001F9A2E /* AppDelegate.swift */,
-				CC0EB3C81A586B16001F9A2E /* MasterViewController.swift */,
-				CC0EB3CA1A586B17001F9A2E /* DetailViewController.swift */,
-				CC0EB3CC1A586B17001F9A2E /* Main.storyboard */,
-				CC0EB3CF1A586B17001F9A2E /* Images.xcassets */,
-				CC0EB3D11A586B17001F9A2E /* LaunchScreen.xib */,
-				CC0EB3C51A586B16001F9A2E /* Lifespice.xcdatamodeld */,
-				CC0EB3C11A586B16001F9A2E /* Supporting Files */,
+				CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */,
+				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
+				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
+				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
+				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
+				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
+				CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */,
+				CC0EB3F41A58C4E5001F9A2E /* Supporting Files */,
 			);
 			path = Lifespice;
 			sourceTree = "<group>";
 		};
-		CC0EB3C11A586B16001F9A2E /* Supporting Files */ = {
+		CC0EB3F41A58C4E5001F9A2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3C21A586B16001F9A2E /* Info.plist */,
+				CC0EB3F51A58C4E5001F9A2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC0EB3DB1A586B17001F9A2E /* LifespiceTests */ = {
+		CC0EB40E1A58C4E5001F9A2E /* LifespiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3DE1A586B17001F9A2E /* LifespiceTests.swift */,
-				CC0EB3DC1A586B17001F9A2E /* Supporting Files */,
+				CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */,
+				CC0EB40F1A58C4E5001F9A2E /* Supporting Files */,
 			);
 			path = LifespiceTests;
 			sourceTree = "<group>";
 		};
-		CC0EB3DC1A586B17001F9A2E /* Supporting Files */ = {
+		CC0EB40F1A58C4E5001F9A2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB3DD1A586B17001F9A2E /* Info.plist */,
+				CC0EB4101A58C4E5001F9A2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -121,13 +121,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC0EB3BD1A586B16001F9A2E /* Lifespice */ = {
+		CC0EB3F01A58C4E5001F9A2E /* Lifespice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC0EB3E21A586B17001F9A2E /* Build configuration list for PBXNativeTarget "Lifespice" */;
+			buildConfigurationList = CC0EB4151A58C4E5001F9A2E /* Build configuration list for PBXNativeTarget "Lifespice" */;
 			buildPhases = (
-				CC0EB3BA1A586B16001F9A2E /* Sources */,
-				CC0EB3BB1A586B16001F9A2E /* Frameworks */,
-				CC0EB3BC1A586B16001F9A2E /* Resources */,
+				CC0EB3ED1A58C4E5001F9A2E /* Sources */,
+				CC0EB3EE1A58C4E5001F9A2E /* Frameworks */,
+				CC0EB3EF1A58C4E5001F9A2E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -135,46 +135,46 @@
 			);
 			name = Lifespice;
 			productName = Lifespice;
-			productReference = CC0EB3BE1A586B16001F9A2E /* Lifespice.app */;
+			productReference = CC0EB3F11A58C4E5001F9A2E /* Lifespice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC0EB3D71A586B17001F9A2E /* LifespiceTests */ = {
+		CC0EB40A1A58C4E5001F9A2E /* LifespiceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC0EB3E51A586B17001F9A2E /* Build configuration list for PBXNativeTarget "LifespiceTests" */;
+			buildConfigurationList = CC0EB4181A58C4E5001F9A2E /* Build configuration list for PBXNativeTarget "LifespiceTests" */;
 			buildPhases = (
-				CC0EB3D41A586B17001F9A2E /* Sources */,
-				CC0EB3D51A586B17001F9A2E /* Frameworks */,
-				CC0EB3D61A586B17001F9A2E /* Resources */,
+				CC0EB4071A58C4E5001F9A2E /* Sources */,
+				CC0EB4081A58C4E5001F9A2E /* Frameworks */,
+				CC0EB4091A58C4E5001F9A2E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CC0EB3DA1A586B17001F9A2E /* PBXTargetDependency */,
+				CC0EB40D1A58C4E5001F9A2E /* PBXTargetDependency */,
 			);
 			name = LifespiceTests;
 			productName = LifespiceTests;
-			productReference = CC0EB3D81A586B17001F9A2E /* LifespiceTests.xctest */;
+			productReference = CC0EB40B1A58C4E5001F9A2E /* LifespiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CC0EB3B61A586B16001F9A2E /* Project object */ = {
+		CC0EB3E91A58C4E5001F9A2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Lifespice;
 				TargetAttributes = {
-					CC0EB3BD1A586B16001F9A2E = {
+					CC0EB3F01A58C4E5001F9A2E = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					CC0EB3D71A586B17001F9A2E = {
+					CC0EB40A1A58C4E5001F9A2E = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = CC0EB3BD1A586B16001F9A2E;
+						TestTargetID = CC0EB3F01A58C4E5001F9A2E;
 					};
 				};
 			};
-			buildConfigurationList = CC0EB3B91A586B16001F9A2E /* Build configuration list for PBXProject "Lifespice" */;
+			buildConfigurationList = CC0EB3EC1A58C4E5001F9A2E /* Build configuration list for PBXProject "Lifespice" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -182,29 +182,29 @@
 				en,
 				Base,
 			);
-			mainGroup = CC0EB3B51A586B16001F9A2E;
-			productRefGroup = CC0EB3BF1A586B16001F9A2E /* Products */;
+			mainGroup = CC0EB3E81A58C4E5001F9A2E;
+			productRefGroup = CC0EB3F21A58C4E5001F9A2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC0EB3BD1A586B16001F9A2E /* Lifespice */,
-				CC0EB3D71A586B17001F9A2E /* LifespiceTests */,
+				CC0EB3F01A58C4E5001F9A2E /* Lifespice */,
+				CC0EB40A1A58C4E5001F9A2E /* LifespiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC0EB3BC1A586B16001F9A2E /* Resources */ = {
+		CC0EB3EF1A58C4E5001F9A2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0EB3CE1A586B17001F9A2E /* Main.storyboard in Resources */,
-				CC0EB3D31A586B17001F9A2E /* LaunchScreen.xib in Resources */,
-				CC0EB3D01A586B17001F9A2E /* Images.xcassets in Resources */,
+				CC0EB4011A58C4E5001F9A2E /* Main.storyboard in Resources */,
+				CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */,
+				CC0EB4031A58C4E5001F9A2E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC0EB3D61A586B17001F9A2E /* Resources */ = {
+		CC0EB4091A58C4E5001F9A2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,48 +214,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC0EB3BA1A586B16001F9A2E /* Sources */ = {
+		CC0EB3ED1A58C4E5001F9A2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0EB3C71A586B16001F9A2E /* Lifespice.xcdatamodeld in Sources */,
-				CC0EB3C41A586B16001F9A2E /* AppDelegate.swift in Sources */,
-				CC0EB3C91A586B16001F9A2E /* MasterViewController.swift in Sources */,
-				CC0EB3CB1A586B17001F9A2E /* DetailViewController.swift in Sources */,
+				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
+				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
+				CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */,
+				CC0EB3FE1A58C4E5001F9A2E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC0EB3D41A586B17001F9A2E /* Sources */ = {
+		CC0EB4071A58C4E5001F9A2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0EB3DF1A586B17001F9A2E /* LifespiceTests.swift in Sources */,
+				CC0EB4121A58C4E5001F9A2E /* LifespiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CC0EB3DA1A586B17001F9A2E /* PBXTargetDependency */ = {
+		CC0EB40D1A58C4E5001F9A2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC0EB3BD1A586B16001F9A2E /* Lifespice */;
-			targetProxy = CC0EB3D91A586B17001F9A2E /* PBXContainerItemProxy */;
+			target = CC0EB3F01A58C4E5001F9A2E /* Lifespice */;
+			targetProxy = CC0EB40C1A58C4E5001F9A2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC0EB3CC1A586B17001F9A2E /* Main.storyboard */ = {
+		CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC0EB3CD1A586B17001F9A2E /* Base */,
+				CC0EB4001A58C4E5001F9A2E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CC0EB3D11A586B17001F9A2E /* LaunchScreen.xib */ = {
+		CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC0EB3D21A586B17001F9A2E /* Base */,
+				CC0EB4051A58C4E5001F9A2E /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CC0EB3E01A586B17001F9A2E /* Debug */ = {
+		CC0EB4131A58C4E5001F9A2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -305,7 +305,7 @@
 			};
 			name = Debug;
 		};
-		CC0EB3E11A586B17001F9A2E /* Release */ = {
+		CC0EB4141A58C4E5001F9A2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -340,7 +340,7 @@
 			};
 			name = Release;
 		};
-		CC0EB3E31A586B17001F9A2E /* Debug */ = {
+		CC0EB4161A58C4E5001F9A2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -350,7 +350,7 @@
 			};
 			name = Debug;
 		};
-		CC0EB3E41A586B17001F9A2E /* Release */ = {
+		CC0EB4171A58C4E5001F9A2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -360,7 +360,7 @@
 			};
 			name = Release;
 		};
-		CC0EB3E61A586B17001F9A2E /* Debug */ = {
+		CC0EB4191A58C4E5001F9A2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -379,7 +379,7 @@
 			};
 			name = Debug;
 		};
-		CC0EB3E71A586B17001F9A2E /* Release */ = {
+		CC0EB41A1A58C4E5001F9A2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -397,45 +397,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC0EB3B91A586B16001F9A2E /* Build configuration list for PBXProject "Lifespice" */ = {
+		CC0EB3EC1A58C4E5001F9A2E /* Build configuration list for PBXProject "Lifespice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC0EB3E01A586B17001F9A2E /* Debug */,
-				CC0EB3E11A586B17001F9A2E /* Release */,
+				CC0EB4131A58C4E5001F9A2E /* Debug */,
+				CC0EB4141A58C4E5001F9A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC0EB3E21A586B17001F9A2E /* Build configuration list for PBXNativeTarget "Lifespice" */ = {
+		CC0EB4151A58C4E5001F9A2E /* Build configuration list for PBXNativeTarget "Lifespice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC0EB3E31A586B17001F9A2E /* Debug */,
-				CC0EB3E41A586B17001F9A2E /* Release */,
+				CC0EB4161A58C4E5001F9A2E /* Debug */,
+				CC0EB4171A58C4E5001F9A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		CC0EB3E51A586B17001F9A2E /* Build configuration list for PBXNativeTarget "LifespiceTests" */ = {
+		CC0EB4181A58C4E5001F9A2E /* Build configuration list for PBXNativeTarget "LifespiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC0EB3E61A586B17001F9A2E /* Debug */,
-				CC0EB3E71A586B17001F9A2E /* Release */,
+				CC0EB4191A58C4E5001F9A2E /* Debug */,
+				CC0EB41A1A58C4E5001F9A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CC0EB3C51A586B16001F9A2E /* Lifespice.xcdatamodeld */ = {
+		CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CC0EB3C61A586B16001F9A2E /* Lifespice.xcdatamodel */,
+				CC0EB3F91A58C4E5001F9A2E /* Lifespice.xcdatamodel */,
 			);
-			currentVersion = CC0EB3C61A586B16001F9A2E /* Lifespice.xcdatamodel */;
+			currentVersion = CC0EB3F91A58C4E5001F9A2E /* Lifespice.xcdatamodel */;
 			path = Lifespice.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CC0EB3B61A586B16001F9A2E /* Project object */;
+	rootObject = CC0EB3E91A58C4E5001F9A2E /* Project object */;
 }
