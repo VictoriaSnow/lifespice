@@ -15,6 +15,10 @@
 		CC0EB4031A58C4E5001F9A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4021A58C4E5001F9A2E /* Images.xcassets */; };
 		CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */; };
 		CC0EB4121A58C4E5001F9A2E /* LifespiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */; };
+		CC0EB41C1A58DB51001F9A2E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41B1A58DB51001F9A2E /* Model.swift */; };
+		CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */; };
+		CC0EB4201A58DD73001F9A2E /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */; };
+		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		CC0EB40B1A58C4E5001F9A2E /* LifespiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifespiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0EB4101A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespiceTests.swift; sourceTree = "<group>"; };
+		CC0EB41B1A58DB51001F9A2E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,10 @@
 				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
+				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
+				CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */,
+				CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */,
+				CC0EB41B1A58DB51001F9A2E /* Model.swift */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
 				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
 				CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */,
@@ -218,9 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */,
+				CC0EB41C1A58DB51001F9A2E /* Model.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
+				CC0EB4201A58DD73001F9A2E /* EditEventViewController.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
 				CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */,
+				CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */,
 				CC0EB3FE1A58C4E5001F9A2E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +429,7 @@
 				CC0EB4171A58C4E5001F9A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC0EB4181A58C4E5001F9A2E /* Build configuration list for PBXNativeTarget "LifespiceTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +438,7 @@
 				CC0EB41A1A58C4E5001F9A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
