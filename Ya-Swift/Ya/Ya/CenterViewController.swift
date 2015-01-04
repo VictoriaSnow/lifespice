@@ -39,7 +39,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         var nav = self.navigationController?.navigationBar
-        nav?.backgroundColor = UIColor.clearColor()
+        nav?.backgroundColor = UIColor.yellowColor()
 //        nav?.barStyle = UIBarStyle.BlackTranslucent
 //        nav?.tintColor = UIColor.whiteColor()
 //        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
