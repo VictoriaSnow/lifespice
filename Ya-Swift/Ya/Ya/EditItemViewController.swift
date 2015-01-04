@@ -24,6 +24,14 @@ class EditItemViewController: UITableViewController {
     var eventTitle: String = ""
     var eventLocation: String = ""
     var existingEvent: NSManagedObject!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
+    }
+
 
     @IBAction func dateDis(sender: UITextField) {
         var datePickerView : UIDatePicker = UIDatePicker()
@@ -39,11 +47,9 @@ class EditItemViewController: UITableViewController {
         textFieldDate.text = dateFormatter.stringFromDate(sender.date)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func endEdit(sender: UITextField) {
+        self.resignFirstResponder()
         
-        // Do any additional setup after loading the view.
-        //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
     }
     
     

@@ -13,10 +13,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" id="hfd-Yy-FAI">
-                            <rect key="frame" x="0.0" y="64" width="375" height="300"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="tT7-dE-Cst">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="oF5-cZ-F0f" id="diM-YM-DFd"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="h4Y-eR-mEM" detailTextLabel="wNJ-WO-XMi" style="IBUITableViewCellStyleSubtitle" id="8aO-If-adc">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -73,12 +77,22 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="imageView" destination="hfd-Yy-FAI" id="qJO-UA-5s9"/>
+                        <outlet property="searchBar" destination="tT7-dE-Cst" id="M4Z-y8-qb1"/>
+                        <outlet property="searchDisplayController" destination="fGQ-uM-yjc" id="rZH-fP-U4c"/>
                         <outlet property="titleLabel" destination="hxh-ij-KX1" id="hAk-5P-Jwd"/>
                         <segue destination="2Ih-6O-8gA" kind="show" identifier="edit" id="Shf-hP-XHO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYa-Gu-5ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="fGQ-uM-yjc">
+                    <connections>
+                        <outlet property="delegate" destination="oF5-cZ-F0f" id="FW6-O4-RQa"/>
+                        <outlet property="searchBar" destination="tT7-dE-Cst" id="shC-j6-ZHg"/>
+                        <outlet property="searchContentsController" destination="oF5-cZ-F0f" id="fNa-dn-3DF"/>
+                        <outlet property="searchResultsDataSource" destination="oF5-cZ-F0f" id="Zeu-Iy-7Jo"/>
+                        <outlet property="searchResultsDelegate" destination="oF5-cZ-F0f" id="eXE-18-YF4"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="939.5" y="338.5"/>
         </scene>
@@ -129,7 +143,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="dateDis:" destination="DrH-9S-ONE" eventType="editingDidBegin" id="6Hf-W4-jSf"/>
+                                                        <action selector="dateDis:" destination="DrH-9S-ONE" eventType="editingDidBegin" id="Ljn-eN-jZj"/>
+                                                        <action selector="endEdit:" destination="DrH-9S-ONE" eventType="editingDidEnd" id="WL7-TC-cSV"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -468,6 +483,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="dateDis:" destination="2Ih-6O-8gA" eventType="editingDidEnd" id="kKj-Gm-eRk"/>
+                                                        <action selector="endEdit:" destination="2Ih-6O-8gA" eventType="editingDidEnd" id="oVX-aa-sHY"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -610,7 +626,6 @@
     </scenes>
     <resources>
         <image name="header_small" width="750" height="130"/>
-        <image name="profile" width="750" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Shf-hP-XHO"/>

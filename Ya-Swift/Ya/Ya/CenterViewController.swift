@@ -18,8 +18,9 @@ protocol CenterViewControllerDelegate {
 
 class CenterViewController: UITableViewController, SidePanelViewControllerDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
 
-    @IBOutlet weak private var imageView: UIImageView!
+    //@IBOutlet weak private var imageView: UIImageView!
 
     @IBOutlet weak var titleLabel: UINavigationItem!
 
@@ -48,7 +49,7 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let freq = NSFetchRequest(entityName: "List")
-        
+        self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
         myList = context.executeFetchRequest(freq, error: nil)!
         tableView.reloadData()
         
@@ -143,11 +144,13 @@ class CenterViewController: UITableViewController, SidePanelViewControllerDelega
         // Pass the selected object to the new view controller.)
         
             if (segue.identifier == "showInfo") {
-            var selectedRow = self.tableView.indexPathForSelectedRow()
-                
-            //var data: NSManagedObject = myList[selectedRow] as NSManagedObject
             
+            var selectedRow = self.tableView.indexPathForSelectedRow()
+            
+            //et data = myList[selectedRow]? as AnyObject
+                
             var moveVC: ShowItemViewController = segue.destinationViewController as ShowItemViewController
+            
             //moveVC.itemName = data.valueForKeyPath("title") as String
             
             

@@ -17,6 +17,17 @@ class AddItemViewController: UITableViewController {
     
     @IBOutlet weak var textFieldDate: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //let now = NSDate()
+        //dateAdd.minimumDate = now
+        //dateAdd.hidden = true
+        
+        // Do any additional setup after loading the view.
+        //                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
+    }
+
+    
     func handleDatePicker(sender: UIDatePicker) {
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
@@ -31,14 +42,10 @@ class AddItemViewController: UITableViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //let now = NSDate()
-        //dateAdd.minimumDate = now
-        //dateAdd.hidden = true
+    @IBAction func endEdit(sender: UITextField) {
         
-        // Do any additional setup after loading the view.
-//                self.tableView.backgroundView = UIImageView(image: UIImage(named: "new_york"))
+        self.resignFirstResponder()
+        
     }
     
     
