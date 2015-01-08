@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -431,6 +430,9 @@
                                                     <rect key="frame" x="15" y="13" width="290" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="endEditing:" destination="bvY-5U-Y9p" eventType="editingDidEnd" id="bbd-xx-psZ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -562,8 +564,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Event" id="V8n-be-B9R">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="etG-dp-maL"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wLd-v1-iQx"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="etG-dp-maL">
+                            <connections>
+                                <action selector="cancelTapped:" destination="bvY-5U-Y9p" id="71u-9F-7dP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wLd-v1-iQx">
+                            <connections>
+                                <action selector="doneTapped:" destination="bvY-5U-Y9p" id="YO1-JD-1J9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoa-Gp-6y8" userLabel="First Responder" sceneMemberID="firstResponder"/>
