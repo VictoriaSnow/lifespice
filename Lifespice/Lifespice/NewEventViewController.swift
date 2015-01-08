@@ -11,6 +11,25 @@ import CoreData
 
 class NewEventViewController: UITableViewController {
 
+    @IBOutlet weak var textFieldTitle: UITextField!
+    
+    
+    @IBOutlet weak var detailDate: UILabel!
+    
+    
+    @IBOutlet weak var detailCategory: UILabel!
+    
+    
+    @IBOutlet weak var detailReminder: UILabel!
+    
+    
+    @IBOutlet weak var detailRepeat: UILabel!
+    
+
+    @IBOutlet weak var switchImportant: UISwitch!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,12 +38,52 @@ class NewEventViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
+        initDetailLabel()
 
+        
+        
+        
+    }
+    
+    func initDetailLabel() {
+        // Date detail label
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .ShortStyle
+        let today = formatter.stringFromDate(date)
+        detailDate.text = today
+        // Category detail label
+        // Reminder detail label
+        var reminderDetail = Reminder()
+        detailReminder.text = reminderDetail.rawValue
+        //Repeat detail label
+        var repeatDetail = Repeat()
+        detailRepeat.text = repeatDetail.rawValue
+        
+    }
+    
     @IBAction func endEditing(sender: UITextField) {
         self.resignFirstResponder()
     }
     @IBAction func doneTapped(sender: AnyObject) {
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext!
+        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
+        var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
+        newEvent.eventTitle = textFieldTitle.text
+//        newEvent.eventDate = detailDate
+//        newEvent.eventCategory = detailCategory
+        newEvent.eventReminder = detailReminder.text!
+        newEvent.eventRepeat = detailRepeat.text!
+        if switchImportant.on {
+            newEvent.eventImportant = "YES"
+        } else {
+            newEvent.eventImportant = "NO"
+        }
+        
+        context.save(nil)
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
     }
     
     

@@ -18,7 +18,7 @@ class Model: NSManagedObject {
     @NSManaged var eventRepeat: String
     @NSManaged var eventReminder: String
     @NSManaged var eventCategory: String
-    @NSManaged var eventImportant: Bool
+    @NSManaged var eventImportant: String
     
     @NSManaged var timeStamp: NSDate
 }

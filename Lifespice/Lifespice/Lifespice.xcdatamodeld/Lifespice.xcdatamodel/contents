@@ -3,7 +3,7 @@
     <entity name="Event">
         <attribute name="eventCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="eventImportant" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="eventImportant" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventReminder" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventRepeat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTitle" optional="YES" attributeType="String" syncable="YES"/>
