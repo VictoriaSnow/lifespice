@@ -126,7 +126,7 @@ class NewEventViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if (indexPath.row == 1) {
+        if (indexPath.row == 1 && indexPath.section == 0) {
             if (self.datePickerIsShown) {
                 self.hideDatePickerCell()
             }else{
@@ -158,6 +158,7 @@ class NewEventViewController: UITableViewController {
         self.datePicker.hidden = true
         
     }
+    
     @IBAction func dateAction(sender: UIDatePicker) {
         self.detailDate.text = self.dateFormatter.stringFromDate(sender.date)
         self.selectedDate = sender.date
