@@ -218,8 +218,8 @@ class NewEventViewController: UITableViewController {
             let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
             var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
             newEvent.eventTitle = textFieldTitle.text
-            //        newEvent.eventDate = detailDate
-            //        newEvent.eventCategory = detailCategory
+            newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
+            // newEvent.eventCategory = detailCategory
             newEvent.eventReminder = detailReminder.text!
             newEvent.eventRepeat = detailRepeat.text!
             if switchImportant.on {
