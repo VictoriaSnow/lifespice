@@ -11,9 +11,7 @@ import CoreData
 
 class NewEventViewController: UITableViewController {
 
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
+    
     
     @IBOutlet weak var textFieldTitle: UITextField!
     
@@ -44,6 +42,10 @@ class NewEventViewController: UITableViewController {
     var datePickerIsShown:Bool = false
     
     
+    var reminder: String = Reminder.ReminderType().rawValue
+    var repeat: String = Repeat.RepeatType().rawValue
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,7 +58,6 @@ class NewEventViewController: UITableViewController {
         
     }
     
-    var reminder: String = Reminder.ReminderType().rawValue
     
     func initTableView() {
         // Date
@@ -76,8 +77,7 @@ class NewEventViewController: UITableViewController {
         detailReminder.text = reminder
         
         //Repeat
-        var repeatDetail = Repeat.RepeatType()
-        detailRepeat.text = repeatDetail.rawValue
+        detailRepeat.text = repeat
         
     }
     
@@ -90,7 +90,14 @@ class NewEventViewController: UITableViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-
+    @IBAction func selectedRepeat(segue:UIStoryboardSegue) {
+        let setRepeatViewController = segue.sourceViewController as SetRepeatViewController
+        if let selectedRepeatType = setRepeatViewController.selectedRepeatType {
+            detailRepeat.text = selectedRepeatType
+            repeat = selectedRepeatType
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     
     func setupDateLabel() {
@@ -173,32 +180,7 @@ class NewEventViewController: UITableViewController {
     @IBAction func endEditing(sender: UITextField) {
         self.resignFirstResponder()
     }
-//    @IBAction func doneTapped(sender: AnyObject) {
-//    
-//        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-//        let context: NSManagedObjectContext = appDel.managedObjectContext!
-//        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
-//        var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
-//        newEvent.eventTitle = textFieldTitle.text
-////        newEvent.eventDate = detailDate
-////        newEvent.eventCategory = detailCategory
-//        newEvent.eventReminder = detailReminder.text!
-//        newEvent.eventRepeat = detailRepeat.text!
-//        if switchImportant.on {
-//            newEvent.eventImportant = "YES"
-//        } else {
-//            newEvent.eventImportant = "NO"
-//        }
-//        
-//        context.save(nil)
-//        self.navigationController?.popToRootViewControllerAnimated(true)
-//        
-//    }
-    
-    
-//    @IBAction func cancelTapped(sender: AnyObject) {
-//                self.navigationController?.popToRootViewControllerAnimated(true)
-//    }
+
     
     
     override func didReceiveMemoryWarning() {
@@ -220,7 +202,6 @@ class NewEventViewController: UITableViewController {
             var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
             newEvent.eventTitle = textFieldTitle.text
             newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
-
             newEvent.eventReminder = detailReminder.text!
             newEvent.eventRepeat = detailRepeat.text!
             if switchImportant.on {
@@ -231,17 +212,22 @@ class NewEventViewController: UITableViewController {
             
             context.save(nil)
             
-            println(newEvent.eventTitle)
-            println(newEvent.eventDate.description)
-            println(newEvent.eventReminder)
-            println(newEvent.eventRepeat)
-            println(newEvent.eventImportant)
-            println("Saved")
+            println("New Event Title: " + newEvent.eventTitle)
+            println("New Event Date: " + newEvent.eventDate.description)
+            println("New Event Reminder: " + newEvent.eventReminder)
+            println("New Event Repeat: " + newEvent.eventRepeat)
+            println("New Event Important: " + newEvent.eventImportant)
+            println("All Data Saved")
         }
         
         if segue.identifier == "SetReminder" {
             let setReminderViewController = segue.destinationViewController as SetReminderViewController
             setReminderViewController.selectedReminderType = reminder
+        }
+        
+        if segue.identifier == "SetRepeat" {
+            let setRepeatViewController = segue.destinationViewController as SetRepeatViewController
+            setRepeatViewController.selectedRepeatType = repeat
         }
         
     }

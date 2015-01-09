@@ -84,7 +84,7 @@ class SetReminderViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         
-        //Other row is selected - need to deselect it
+        // Other row is selected - need to deselect it
         if let index = selectedReminderIndex {
             let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
             cell?.accessoryType = .None
@@ -95,7 +95,7 @@ class SetReminderViewController: UITableViewController {
         selectedReminderType = reminders[indexPath.row].title
         
         
-        //update the checkmark for the current row
+        // Update the checkmark for the current row
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
     }

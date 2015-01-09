@@ -779,6 +779,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HQn-bf-ka1" kind="unwind" identifier="SaveSelectedRepeat" unwindAction="selectedRepeat:" id="zoK-LE-kMm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -790,6 +793,7 @@
                     <navigationItem key="navigationItem" id="Rsx-mm-JII"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAp-iV-MY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HQn-bf-ka1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1025" y="741"/>
         </scene>

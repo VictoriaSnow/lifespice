@@ -9,7 +9,13 @@
 import UIKit
 
 class SetRepeatViewController: UITableViewController {
-
+    
+    let repeats = Repeat.allRepeats()
+    
+    var selectedRepeatType: String? = nil
+    var selectedRepeatIndex: Int? = nil
+    var selectedRepeat = Repeat(title: "Never")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +24,10 @@ class SetRepeatViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        if let repeat = selectedRepeatType {
+            selectedRepeatIndex = find(["Never", "Every Week", "Every 2 Weeks", "Every Month", "Every Year"], repeat)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,24 +40,52 @@ class SetRepeatViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return repeats.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RepeatCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
+        cell.textLabel?.text = repeats[indexPath.row].title
+        
+        if indexPath.row == selectedRepeatIndex {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+        
 
         return cell
     }
-    */
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Other row is selected - need to deselect it
+        if let index = selectedRepeatIndex {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
+        }
+        
+        selectedRepeat = repeats[indexPath.row]
+        selectedRepeatIndex = indexPath.row
+        selectedRepeatType = repeats[indexPath.row].title
+        
+        
+        // Update the checkmark for the current row
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,14 +122,24 @@ class SetRepeatViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "SaveSelectedRepeat" {
+            let cell = sender as UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            selectedRepeatIndex = indexPath?.row
+            if let index = selectedRepeatIndex {
+                selectedRepeat = repeats[index]
+                selectedRepeatType = repeats[index].title
+            }
+            
+        }
     }
-    */
+    
 
 }

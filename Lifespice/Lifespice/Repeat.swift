@@ -26,7 +26,7 @@ class Repeat {
         self.title = title
     }
     
-    func repeatList() -> Array<Repeat> {
+    class func allRepeats() -> Array<Repeat> {
         let repeatList = [Repeat(title: RepeatType.Never.rawValue), Repeat(title: RepeatType.Weekly.rawValue), Repeat(title: RepeatType.BiWeekly.rawValue), Repeat(title: RepeatType.Monthly.rawValue), Repeat(title: RepeatType.Yearly.rawValue)]
         return repeatList
     }
