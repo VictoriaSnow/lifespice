@@ -132,7 +132,10 @@ class NewEventViewController: UITableViewController {
             }else{
                 self.showDatePickerCell()
             }
+        } else {
+            self.hideDatePickerCell() 
         }
+
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
