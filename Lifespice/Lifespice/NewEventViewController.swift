@@ -218,7 +218,7 @@ class NewEventViewController: UITableViewController {
             let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
             var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
             newEvent.eventTitle = textFieldTitle.text
-            //        newEvent.eventDate = detailDate
+            newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
             //        newEvent.eventCategory = detailCategory
             newEvent.eventReminder = detailReminder.text!
             newEvent.eventRepeat = detailRepeat.text!
@@ -230,6 +230,11 @@ class NewEventViewController: UITableViewController {
             
             context.save(nil)
             
+            println(newEvent.eventTitle)
+            println(newEvent.eventDate.description)
+            println(newEvent.eventReminder)
+            println(newEvent.eventRepeat)
+            println(newEvent.eventImportant)
             println("Saved")
         }
         
