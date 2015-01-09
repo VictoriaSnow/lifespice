@@ -8,27 +8,27 @@
 
 import UIKit
 
-enum Reminder: String {
-    case None = "None", OneDayUntil = "1 Day Until", TwoDaysUntil = "2 Days Until", ThreeDaysUntil = "3 Days Until", OneWeekUntil = "1 Week Until"
-    init() {
-        self = .None
-    }
-}
+//enum Reminder: String {
+//    case None = "None", OneDayUntil = "1 Day Until", TwoDaysUntil = "2 Days Until", ThreeDaysUntil = "3 Days Until", OneWeekUntil = "1 Week Until"
+//    init() {
+//        self = .None
+//    }
+//}
 
-enum Repeat: String {
-    case Never = "Never", Weekly = "Every Week", BiWeekly = "Every 2 Weeks", Monthly = "Every Month", Yearly = "Every Year"
-    init() {
-        self = .Never
-    }
-    
-}
+//enum Repeat: String {
+//    case Never = "Never", Weekly = "Every Week", BiWeekly = "Every 2 Weeks", Monthly = "Every Month", Yearly = "Every Year"
+//    init() {
+//        self = .Never
+//    }
+//    
+//}
 
-enum Status: String {
-    case Upcoming = "UpComing", Past = "Past"
-    init() {
-        self = .Upcoming
-    }
-}
+//enum Status: String {
+//    case Upcoming = "UpComing", Past = "Past"
+//    init() {
+//        self = .Upcoming
+//    }
+//}
 
 //enum Category: String {
 //    case Private = "Private", Work = "Work", Birthday = "Birthday", Anniversary = "Anniversary", Home = "Home", School = "School"

@@ -11,6 +11,21 @@ import CoreData
 
 class EditEventViewController: UITableViewController {
 
+    @IBOutlet weak var datePickerCell: UITableViewCell!
+    
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
+    @IBOutlet weak var detailDate: UILabel!
+    
+    
+    
+    var selectedDate: NSDate = NSDate()
+    var dateFormatter: NSDateFormatter = NSDateFormatter()
+    var datePickerIsShown:Bool = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,26 +34,130 @@ class EditEventViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        initTableView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func initTableView() {
+        // Date
+        self.setupDateLabel()
+        self.datePicker.hidden = true
+        self.signupForKeyboardNotification()
+        
+        // Category
+        
+        
+        
+        
+        
+        // Reminder
+        
+
+        
+        //Repeat
+
+        
+        
+    }
+    
+
+    
+    
+    func setupDateLabel() {
+        self.dateFormatter = NSDateFormatter()
+        self.dateFormatter.dateStyle = .MediumStyle
+        self.dateFormatter.timeStyle = .NoStyle
+        var today: NSDate = NSDate()
+        self.detailDate.text = self.dateFormatter.stringFromDate(today)
+        self.selectedDate = today
+        
+    }
+    
+    func signupForKeyboardNotification() {
+        var defaultCenter: NSNotificationCenter = NSNotificationCenter()
+        defaultCenter.addObserver(self, selector: "keyboardWillShow", name: UIKeyboardWillShowNotification, object: nil)
+    }
+    
+    func keyboardWillShow() {
+        if (self.datePickerIsShown) {
+            self.hideDatePickerCell()
+        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        
+        if (indexPath.row == 2 && indexPath.section == 0 && self.datePickerIsShown) {
+            return CGFloat(166.0)
+        } else if (indexPath.row == 2 && indexPath.section == 0 && !self.datePickerIsShown){
+            return CGFloat(0.0)
+        } else {
+            return CGFloat(44.0)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == 1) {
+            if (self.datePickerIsShown) {
+                self.hideDatePickerCell()
+            }else{
+                self.showDatePickerCell()
+            }
+        }
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func showDatePickerCell() {
+        self.datePickerIsShown = true
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+        self.datePicker.hidden = false
+        self.datePicker.alpha = 0.0
+        UIView.animateWithDuration(0.40, animations: {
+            self.datePicker.alpha = 1.0
+        })
+    }
+    
+    func hideDatePickerCell() {
+        self.datePickerIsShown = false
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+        UIView.animateWithDuration(0.40, animations: {
+            self.datePicker.alpha = 0.0
+        })
+        
+        self.datePicker.hidden = true
+        
+    }
+    
+    
+    @IBAction func dateAction(sender: UIDatePicker) {
+        self.detailDate.text = self.dateFormatter.stringFromDate(sender.date)
+        self.selectedDate = sender.date
+    }
+
 
     // MARK: - Table view data source
 
+    /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 0
     }
+    */
 
+    /*
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 0
     }
+    */
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

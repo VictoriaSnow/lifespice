@@ -35,6 +35,26 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func cancelNewEvent(segue:UIStoryboardSegue) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func saveNewEvent(segue:UIStoryboardSegue) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 //    func insertNewObject(sender: AnyObject) {
 //        let context = self.fetchedResultsController.managedObjectContext
@@ -65,6 +85,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //            }
 //        }
 //    }
+    
+//    @IBAction func cancelToMasterViewController(segue:UIStoryboardSegue) {
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+//    
+//    @IBAction func saveDetail(segue:UIStoryboardSegue) {
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+    
 
     // MARK: - Table View
 

@@ -21,6 +21,11 @@
 		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
+		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
+		CCD73A331A5E847F00CC6628 /* SetRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */; };
+		CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */; };
+		CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF8C3DA1A5F864B002CEFAA /* Reminder.swift */; };
+		CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,12 @@
 		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
+		CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRepeatViewController.swift; sourceTree = "<group>"; };
+		CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCategoryViewController.swift; sourceTree = "<group>"; };
+		CCF8C3D91A5F81A2002CEFAA /* AppPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AppPlayground.playground; sourceTree = "<group>"; };
+		CCF8C3DA1A5F864B002CEFAA /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repeat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +108,17 @@
 				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
+				CCF8C3D91A5F81A2002CEFAA /* AppPlayground.playground */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
 				CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */,
 				CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */,
+				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
+				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
+				CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */,
 				CC0EB41B1A58DB51001F9A2E /* Model.swift */,
 				CCD73A2C1A5E4B4300CC6628 /* Category.swift */,
+				CCF8C3DA1A5F864B002CEFAA /* Reminder.swift */,
+				CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */,
 				CCD73A2E1A5E4E5400CC6628 /* Enums.swift */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
 				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
@@ -236,12 +253,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD73A331A5E847F00CC6628 /* SetRepeatViewController.swift in Sources */,
+				CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */,
+				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
+				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
 				CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */,
 				CC0EB41C1A58DB51001F9A2E /* Model.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
 				CC0EB4201A58DD73001F9A2E /* EditEventViewController.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
+				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
 				CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */,
 				CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */,
 				CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */,
