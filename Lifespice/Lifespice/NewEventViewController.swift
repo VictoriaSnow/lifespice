@@ -63,6 +63,7 @@ class NewEventViewController: UITableViewController {
         self.setupDateLabel()
         self.datePicker.hidden = true
         self.signupForKeyboardNotification()
+        self.datePicker.datePickerMode = .Date
         
         // Category
         
@@ -94,7 +95,7 @@ class NewEventViewController: UITableViewController {
     
     func setupDateLabel() {
         self.dateFormatter = NSDateFormatter()
-        self.dateFormatter.dateStyle = .MediumStyle
+        self.dateFormatter.dateStyle = .LongStyle
         self.dateFormatter.timeStyle = .NoStyle
         var today: NSDate = NSDate()
         self.detailDate.text = self.dateFormatter.stringFromDate(today)
@@ -219,7 +220,7 @@ class NewEventViewController: UITableViewController {
             var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
             newEvent.eventTitle = textFieldTitle.text
             newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
-            //        newEvent.eventCategory = detailCategory
+
             newEvent.eventReminder = detailReminder.text!
             newEvent.eventRepeat = detailRepeat.text!
             if switchImportant.on {
