@@ -10,10 +10,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 
-    var detailItem: AnyObject? {
+    @IBOutlet weak var eventTitleLabel: UILabel!
+
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventCountdownLabel: UILabel!
+    
+    
+    var detailItem: Event? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,7 +27,18 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-
+        if let detail: Event = self.detailItem {
+            if let title = self.eventTitleLabel {
+                title.text = detail.eventTitle
+            }
+            if let date = self.eventDateLabel {
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateStyle = .LongStyle
+                dateFormatter.timeStyle = .NoStyle
+                date.text = dateFormatter.stringFromDate(detail.eventDate)
+            }
+            
+        }
     }
 
     override func viewDidLoad() {
