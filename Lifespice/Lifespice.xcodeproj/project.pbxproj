@@ -20,6 +20,19 @@
 		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 		CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3B1A60EC2D001ED886 /* Event.swift */; };
 		CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3D1A610C2A001ED886 /* CustomCell.swift */; };
+		CC9C7FBE1A61BFE100E329BD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBC1A61BFE000E329BD /* Bolts.framework */; };
+		CC9C7FBF1A61BFE100E329BD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBD1A61BFE100E329BD /* Parse.framework */; };
+		CC9C7FC11A61C10200E329BD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */; };
+		CC9C7FC31A61C11200E329BD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC21A61C11200E329BD /* CFNetwork.framework */; };
+		CC9C7FC61A61C12000E329BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC41A61C12000E329BD /* CoreGraphics.framework */; };
+		CC9C7FC71A61C12000E329BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC51A61C12000E329BD /* CoreLocation.framework */; };
+		CC9C7FCD1A61C14300E329BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC81A61C14300E329BD /* MobileCoreServices.framework */; };
+		CC9C7FCE1A61C14300E329BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC91A61C14300E329BD /* QuartzCore.framework */; };
+		CC9C7FCF1A61C14300E329BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FCA1A61C14300E329BD /* Security.framework */; };
+		CC9C7FD01A61C14300E329BD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FCB1A61C14300E329BD /* StoreKit.framework */; };
+		CC9C7FD11A61C14300E329BD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FCC1A61C14300E329BD /* SystemConfiguration.framework */; };
+		CC9C7FD31A61C18200E329BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FD21A61C18200E329BD /* libsqlite3.dylib */; };
+		CC9C7FD81A61C39000E329BD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FD71A61C39000E329BD /* libz.dylib */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
 		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
@@ -57,6 +70,20 @@
 		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		CC199C3B1A60EC2D001ED886 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CC199C3D1A610C2A001ED886 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; tabWidth = 3; };
+		CC9C7FBC1A61BFE000E329BD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CC9C7FBD1A61BFE100E329BD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CC9C7FC21A61C11200E329BD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CC9C7FC41A61C12000E329BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC9C7FC51A61C12000E329BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CC9C7FC81A61C14300E329BD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CC9C7FC91A61C14300E329BD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CC9C7FCA1A61C14300E329BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CC9C7FCB1A61C14300E329BD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CC9C7FCC1A61C14300E329BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CC9C7FD21A61C18200E329BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CC9C7FD41A61C29600E329BD /* Lifespice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lifespice-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC9C7FD71A61C39000E329BD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +99,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9C7FD81A61C39000E329BD /* libz.dylib in Frameworks */,
+				CC9C7FD31A61C18200E329BD /* libsqlite3.dylib in Frameworks */,
+				CC9C7FCD1A61C14300E329BD /* MobileCoreServices.framework in Frameworks */,
+				CC9C7FCE1A61C14300E329BD /* QuartzCore.framework in Frameworks */,
+				CC9C7FCF1A61C14300E329BD /* Security.framework in Frameworks */,
+				CC9C7FD01A61C14300E329BD /* StoreKit.framework in Frameworks */,
+				CC9C7FD11A61C14300E329BD /* SystemConfiguration.framework in Frameworks */,
+				CC9C7FC61A61C12000E329BD /* CoreGraphics.framework in Frameworks */,
+				CC9C7FC71A61C12000E329BD /* CoreLocation.framework in Frameworks */,
+				CC9C7FC31A61C11200E329BD /* CFNetwork.framework in Frameworks */,
+				CC9C7FC11A61C10200E329BD /* AudioToolbox.framework in Frameworks */,
+				CC9C7FBF1A61BFE100E329BD /* Parse.framework in Frameworks */,
+				CC9C7FBE1A61BFE100E329BD /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +128,19 @@
 		CC0EB3E81A58C4E5001F9A2E = {
 			isa = PBXGroup;
 			children = (
+				CC9C7FD71A61C39000E329BD /* libz.dylib */,
+				CC9C7FD21A61C18200E329BD /* libsqlite3.dylib */,
+				CC9C7FC81A61C14300E329BD /* MobileCoreServices.framework */,
+				CC9C7FC91A61C14300E329BD /* QuartzCore.framework */,
+				CC9C7FCA1A61C14300E329BD /* Security.framework */,
+				CC9C7FCB1A61C14300E329BD /* StoreKit.framework */,
+				CC9C7FCC1A61C14300E329BD /* SystemConfiguration.framework */,
+				CC9C7FC41A61C12000E329BD /* CoreGraphics.framework */,
+				CC9C7FC51A61C12000E329BD /* CoreLocation.framework */,
+				CC9C7FC21A61C11200E329BD /* CFNetwork.framework */,
+				CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */,
+				CC9C7FBC1A61BFE000E329BD /* Bolts.framework */,
+				CC9C7FBD1A61BFE100E329BD /* Parse.framework */,
 				CC0EB3F31A58C4E5001F9A2E /* Lifespice */,
 				CC0EB40E1A58C4E5001F9A2E /* LifespiceTests */,
 				CC0EB3F21A58C4E5001F9A2E /* Products */,
@@ -127,6 +180,7 @@
 				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
 				CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */,
 				CC0EB3F41A58C4E5001F9A2E /* Supporting Files */,
+				CC9C7FD41A61C29600E329BD /* Lifespice-Bridging-Header.h */,
 			);
 			path = Lifespice;
 			sourceTree = "<group>";
@@ -394,9 +448,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Lifespice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lifespice/Lifespice-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -404,9 +465,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Lifespice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lifespice/Lifespice-Bridging-Header.h";
 			};
 			name = Release;
 		};
