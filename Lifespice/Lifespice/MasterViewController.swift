@@ -123,6 +123,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
         
         cell.cellImageView.image = UIImage(named: event.eventCategory + "@icon")
+        
+        var countdown:Int = cell.countdownDays(event.eventDate)
+        cell.cellNumberLabel.text = toString(countdown)
 
     }
 
