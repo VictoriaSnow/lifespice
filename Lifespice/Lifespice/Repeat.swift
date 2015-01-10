@@ -27,7 +27,17 @@ class Repeat {
     }
     
     class func allRepeats() -> Array<Repeat> {
-        let repeatList = [Repeat(title: RepeatType.Never.rawValue), Repeat(title: RepeatType.Weekly.rawValue), Repeat(title: RepeatType.BiWeekly.rawValue), Repeat(title: RepeatType.Monthly.rawValue), Repeat(title: RepeatType.Yearly.rawValue)]
+        let repeatList = [Repeat(title: "Never"), Repeat(title: "Every Week"), Repeat(title: "Every 2 Weeks"), Repeat(title: "Every Month"), Repeat(title: "Every Year")]
         return repeatList
     }
+    
+    class func repeatTypes() -> [String] {
+        let neverType = RepeatType.Never.rawValue
+        let weeklyType = RepeatType.Weekly.rawValue
+        let biWeeklyType = RepeatType.BiWeekly.rawValue
+        let monthlyType = RepeatType.Monthly.rawValue
+        let yearlyType = RepeatType.Yearly.rawValue
+        return [neverType, weeklyType, biWeeklyType, monthlyType, yearlyType]
+    }
+
 }

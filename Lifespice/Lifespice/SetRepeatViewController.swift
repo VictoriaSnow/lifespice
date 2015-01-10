@@ -24,9 +24,9 @@ class SetRepeatViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        let repeatList = Repeat.repeatTypes()
         if let repeat = selectedRepeatType {
-            selectedRepeatIndex = find(["Never", "Every Week", "Every 2 Weeks", "Every Month", "Every Year"], repeat)
+            selectedRepeatIndex = find(repeatList, repeat)
         }
     }
 

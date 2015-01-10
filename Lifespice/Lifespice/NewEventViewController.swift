@@ -41,9 +41,11 @@ class NewEventViewController: UITableViewController {
     var dateFormatter: NSDateFormatter = NSDateFormatter()
     var datePickerIsShown:Bool = false
     
+
     
     var reminder: String = Reminder.ReminderType().rawValue
     var repeat: String = Repeat.RepeatType().rawValue
+    var category: String = Category.CategoryTag().rawValue
     
     
     override func viewDidLoad() {
@@ -60,6 +62,7 @@ class NewEventViewController: UITableViewController {
     
     
     func initTableView() {
+        
         // Date
         self.setupDateLabel()
         self.datePicker.hidden = true
@@ -67,10 +70,7 @@ class NewEventViewController: UITableViewController {
         self.datePicker.datePickerMode = .Date
         
         // Category
-        
-        
-        
-        
+        detailCategory.text = category
         
         // Reminder
         
@@ -98,6 +98,19 @@ class NewEventViewController: UITableViewController {
         }
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBAction func selectedCategory(segue:UIStoryboardSegue) {
+        let setCategoryViewController = segue.sourceViewController as SetCategoryViewController
+        if let selectedCategoryTag = setCategoryViewController.selectedCategoryTag {
+            detailCategory.text = selectedCategoryTag
+            category = selectedCategoryTag
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
+    
+    
     
     
     func setupDateLabel() {
@@ -197,27 +210,51 @@ class NewEventViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "SaveNewEvent" {
             let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            
             let context: NSManagedObjectContext = appDel.managedObjectContext!
+            
             let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
-            var newEvent = Model(entity: entity!, insertIntoManagedObjectContext: context)
+            let newEvent = Event(entity: entity!, insertIntoManagedObjectContext: context)
+            
             newEvent.eventTitle = textFieldTitle.text
             newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
+            newEvent.eventCategory = detailCategory.text!
             newEvent.eventReminder = detailReminder.text!
             newEvent.eventRepeat = detailRepeat.text!
             if switchImportant.on {
-                newEvent.eventImportant = "YES"
+                newEvent.eventImportant = true
             } else {
-                newEvent.eventImportant = "NO"
+                newEvent.eventImportant = false
             }
-            
             context.save(nil)
             
-            println("New Event Title: " + newEvent.eventTitle)
-            println("New Event Date: " + newEvent.eventDate.description)
-            println("New Event Reminder: " + newEvent.eventReminder)
-            println("New Event Repeat: " + newEvent.eventRepeat)
-            println("New Event Important: " + newEvent.eventImportant)
-            println("All Data Saved")
+//            let newEvent = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+//            newEvent.setValue(textFieldTitle.text, forKey: "eventTitle")
+//            newEvent.setValue(dateFormatter.dateFromString(detailDate.text!), forKey: "eventDate")
+//            newEvent.setValue(detailCategory.text!, forKey: "eventCategory")
+//            newEvent.setValue(detailReminder.text!, forKey: "eventReminder")
+//            newEvent.setValue(detailRepeat.text!, forKey: "eventRepeat")
+//            
+//            if switchImportant.on {
+//                newEvent.setValue(true, forKey: "eventImportant")
+//            } else {
+//                newEvent.setValue(false, forKey: "eventImportant")
+//            }
+            
+//            var error: NSError?
+//            if !context.save(&error) {
+//                println("Could not save \(error), \(error?.userInfo)")
+//            }
+            
+
+//
+//            println("New Event Title: " + newEvent.eventTitle)
+//            println("New Event Date: " + newEvent.eventDate.description)
+//            println("New Event Category: " + newEvent.eventCategory)
+//            println("New Event Reminder: " + newEvent.eventReminder)
+//            println("New Event Repeat: " + newEvent.eventRepeat)
+//            println("New Event Important: " + newEvent.eventImportant)
+//            println("All Data Saved")
         }
         
         if segue.identifier == "SetReminder" {
@@ -228,6 +265,10 @@ class NewEventViewController: UITableViewController {
         if segue.identifier == "SetRepeat" {
             let setRepeatViewController = segue.destinationViewController as SetRepeatViewController
             setRepeatViewController.selectedRepeatType = repeat
+        }
+        if segue.identifier == "SetCategory" {
+            let setCategoryViewController = segue.destinationViewController as SetCategoryViewController
+            setCategoryViewController.selectedCategoryTag = category
         }
         
     }

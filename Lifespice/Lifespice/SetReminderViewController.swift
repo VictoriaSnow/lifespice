@@ -30,9 +30,9 @@ class SetReminderViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        let reminderList = Reminder.reminderTypes()
         if let reminder = selectedReminderType {
-            selectedReminderIndex = find(["None", "1 day until", "2 days until", "3 days until", "1 week until"], reminder)
+            selectedReminderIndex = find(reminderList, reminder)
         }
     }
 
@@ -76,9 +76,6 @@ class SetReminderViewController: UITableViewController {
         return cell
     }
 
-//    @IBAction func backToNewEventViewController(segue: UIStoryboardSegue) {
-//        dismissViewControllerAnimated(true, completion: nil)
-//    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

@@ -11,7 +11,7 @@ import UIKit
 @objc
 class Category {
     enum CategoryTag: String {
-        case Private = "Private", Work = "Work", Birthday = "Birthday", Anniversary = "Anniversary", Home = "Home", School = "School"
+        case Private = "Private", Work = "Work", School = "School", Birthday = "Birthday", Holiday = "Holiday", Anniversary = "Anniversary"
         init() {
             self = .Private
         }
@@ -26,12 +26,24 @@ class Category {
         self.list = list
     }
     
+    
     class func allCategories() -> Array<Category> {
-        return [ Category(title: "Private", image: UIImage(named: "private.png"), list:[]),
-            Category(title: "Work", image: UIImage(named: "work.png"), list: []),
-            Category(title: "Birthday", image: UIImage(named: "birthday.png"), list: []),
-            Category(title: "Anniversary",  image: UIImage(named: "anniversary.png"), list: []),
-            Category(title: "Home",  image: UIImage(named: "home.png"), list: []),
-            Category(title: "School",  image: UIImage(named: "school.png"), list:[])]
+        return [ Category(title: "Private", image: UIImage(named: "Private.png"), list:[]),
+            Category(title: "Work", image: UIImage(named: "Work.png"), list: []),
+            Category(title: "School",  image: UIImage(named: "School.png"), list:[]),
+            Category(title: "Birthday", image: UIImage(named: "Birthday.png"), list: []),
+            Category(title: "Holiday", image: UIImage(named: "Holiday.png"), list: []),
+            Category(title: "Anniversary",  image: UIImage(named: "Anniversary.png"), list: [])]
+    }
+    
+    class func categoryTags() -> [String] {
+        let privateTag = CategoryTag.Private.rawValue
+        let workTag = CategoryTag.Work.rawValue
+        let schoolTag = CategoryTag.School.rawValue
+        let birthdayTag = CategoryTag.Birthday.rawValue
+        let holidayTag = CategoryTag.Holiday.rawValue
+        let anniversaryTag = CategoryTag.Anniversary.rawValue
+
+        return [privateTag, workTag, schoolTag, birthdayTag, holidayTag, anniversaryTag]
     }
 }
