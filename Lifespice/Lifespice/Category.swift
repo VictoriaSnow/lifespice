@@ -28,12 +28,12 @@ class Category {
     
     
     class func allCategories() -> Array<Category> {
-        return [ Category(title: "Private", image: UIImage(named: "Private.png"), list:[]),
-            Category(title: "Work", image: UIImage(named: "Work.png"), list: []),
-            Category(title: "School",  image: UIImage(named: "School.png"), list:[]),
-            Category(title: "Birthday", image: UIImage(named: "Birthday.png"), list: []),
-            Category(title: "Holiday", image: UIImage(named: "Holiday.png"), list: []),
-            Category(title: "Anniversary",  image: UIImage(named: "Anniversary.png"), list: [])]
+        return [ Category(title: "Private", image: UIImage(named: "private.png"), list:[]),
+            Category(title: "Work", image: UIImage(named: "work.png"), list: []),
+            Category(title: "School",  image: UIImage(named: "school.png"), list:[]),
+            Category(title: "Birthday", image: UIImage(named: "birthday.png"), list: []),
+            Category(title: "Holiday", image: UIImage(named: "holiday.png"), list: []),
+            Category(title: "Anniversary",  image: UIImage(named: "anniversary.png"), list: [])]
     }
     
     class func categoryTags() -> [String] {

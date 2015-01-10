@@ -37,8 +37,21 @@ class DetailViewController: UIViewController {
                 dateFormatter.timeStyle = .NoStyle
                 date.text = dateFormatter.stringFromDate(detail.eventDate)
             }
-            
+            if let countdown = self.eventCountdownLabel {
+                let daysLeft = self.countdownDays(detail.eventDate)
+                countdown.text = toString(daysLeft)
+            }
         }
+    }
+    
+    func countdownDays(eventDate: NSDate) -> Int {
+        var today: NSDate = NSDate()
+        var numDays: Int = 0
+        var calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        var unitFlags:NSCalendarUnit = .DayCalendarUnit
+        let components = calendar.components(unitFlags, fromDate: today, toDate: eventDate, options: nil) as NSDateComponents
+        numDays = components.day
+        return numDays + 1
     }
 
     override func viewDidLoad() {
