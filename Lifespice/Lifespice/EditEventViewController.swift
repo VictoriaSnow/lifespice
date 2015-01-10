@@ -46,6 +46,7 @@ class EditEventViewController: UITableViewController {
         // Date
         self.setupDateLabel()
         self.datePicker.hidden = true
+        datePicker.datePickerMode = .Date
         self.signupForKeyboardNotification()
         
         // Category
@@ -101,7 +102,7 @@ class EditEventViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if (indexPath.row == 1) {
+        if (indexPath.row == 1 && indexPath.section == 0) {
             if (self.datePickerIsShown) {
                 self.hideDatePickerCell()
             }else{
