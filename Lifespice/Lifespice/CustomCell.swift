@@ -17,7 +17,6 @@ class CustomCell: UITableViewCell {
     
     func countdownDays(eventDate: NSDate) -> Int {
         if (isToday(eventDate)) {
-            println("today")
             return 0
         }
         var numDays: Int = 0
@@ -28,7 +27,6 @@ class CustomCell: UITableViewCell {
         numDays = components.day
         
         if (numDays < 0) {
-            println(numDays)
             return numDays
         }
         return numDays + 1
