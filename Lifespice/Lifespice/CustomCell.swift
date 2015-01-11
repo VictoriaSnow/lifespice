@@ -16,15 +16,42 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     func countdownDays(eventDate: NSDate) -> Int {
-        var today: NSDate = NSDate()
+        if (isToday(eventDate)) {
+            println("today")
+            return 0
+        }
         var numDays: Int = 0
-        var calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        var today: NSDate = NSDate()
+                var calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         var unitFlags:NSCalendarUnit = .DayCalendarUnit
         let components = calendar.components(unitFlags, fromDate: today, toDate: eventDate, options: nil) as NSDateComponents
         numDays = components.day
         
+        if (numDays < 0) {
+            println(numDays)
+            return numDays
+        }
         return numDays + 1
         
+        
       }
+    
+    func isToday(date1: NSDate) ->Bool {
+        var today: NSDate = NSDate()
+        let calendar: NSCalendar = NSCalendar.currentCalendar()
+        var unitFlags: NSCalendarUnit = .YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit
+        let component1 = calendar.components(unitFlags, fromDate: date1)
+        let componentToday = calendar.components(unitFlags, fromDate: today)
+        if (component1.day == componentToday.day) {
+            if (component1.month == componentToday.month) {
+                if (component1.year == componentToday.year) {
+                    return true
+                }
+            }
+        }
+        return false
+        
+    }
+    
     
 }

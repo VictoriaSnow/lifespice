@@ -12,11 +12,16 @@ import CoreData
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
+    
+    var searchResultsContext: NSManagedObjectContext? = nil
 
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //    }
+    
     override func viewWillAppear(animated: Bool) {
 //        self.tableView.rowHeight = 61
 
@@ -25,12 +30,39 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView.rowHeight = 61
-
+//        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
         
+        self.tableView.rowHeight = 61
+//        self.filter("")
 
     }
-
+//    
+//    func filter(searchText: NSString) {
+//        var filteredData = NSMutableArray()
+//        let filteredRequest: NSFetchRequest = NSFetchRequest()
+//        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+//        filteredRequest.entity = entity
+//        
+//        let sortDescriptor = NSSortDescriptor(key: "eventDate", ascending: true)
+//        let sortDescriptors = [sortDescriptor]
+//        
+//        filteredRequest.sortDescriptors = [sortDescriptor]
+//        
+//        if (searchText.length > 0) {
+//            var filteredPredicate: NSPredicate = NSPredicate(format: "name CONTAINS[c] %@", searchText)!
+//            filteredRequest.predicate = filteredPredicate
+//        }
+//        
+//        var loadedEntities: NSArray? = managedObjectContext?.executeFetchRequest(filteredRequest, error: nil)
+//        filteredData = NSMutableArray(array: loadedEntities!)
+//        self.tableView.reloadData()
+//    
+//    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,7 +79,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-
+  
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -168,6 +200,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return _fetchedResultsController!
     }    
     var _fetchedResultsController: NSFetchedResultsController? = nil
+    
+
 
     /*
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
