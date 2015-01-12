@@ -34,6 +34,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
+        tableView.rowHeight = 44
         
         overlayView.backgroundColor = UIColor(white: 0.0, alpha: 0.3)
         let item1 = MenuModel(title: "Home", icon: "icon-home")

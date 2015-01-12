@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var countLabel: UILabel!
@@ -26,18 +26,18 @@ class MenuCell: UITableViewCell {
         countLabel.font = UIFont(name: "Avenir-Black", size: 13)
         countLabel.textColor = UIColor.whiteColor()
         
-//        countContainer.backgroundColor = UIColor(red: 0.33, green: 0.62, blue: 0.94, alpha: 1.0)
-//        countContainer.layer.cornerRadius = 15
+        //        countContainer.backgroundColor = UIColor(red: 0.33, green: 0.62, blue: 0.94, alpha: 1.0)
+        //        countContainer.layer.cornerRadius = 15
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
         let countNotAvailable = countLabel.text == nil
         
-//        countContainer.hidden = countNotAvailable
+        //        countContainer.hidden = countNotAvailable
         countLabel.hidden = countNotAvailable
     }
-
+    
 }

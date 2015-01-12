@@ -14,13 +14,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Private@icon" translatesAutoresizingMaskIntoConstraints="NO" id="nsn-Vj-10k">
-                        <rect key="frame" x="17" y="12" width="36" height="36"/>
+                        <rect key="frame" x="20" y="12" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="0Np-ch-zkl"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 1, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74s-qI-kV0">
-                        <rect key="frame" x="77" y="31" width="150" height="21"/>
+                        <rect key="frame" x="76" y="31" width="150" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Event Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-Fc-mUj">
-                        <rect key="frame" x="77" y="8" width="180" height="20"/>
+                        <rect key="frame" x="76" y="9" width="180" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="hkU-qR-IAx"/>
                         </constraints>
@@ -46,17 +46,17 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="74s-qI-kV0" firstAttribute="bottom" secondItem="OXF-ge-2Wq" secondAttribute="bottomMargin" id="35g-gh-boI"/>
-                    <constraint firstItem="nsn-Vj-10k" firstAttribute="leading" secondItem="OXF-ge-2Wq" secondAttribute="leadingMargin" constant="9" id="9Lg-bF-NJG"/>
+                    <constraint firstItem="nsn-Vj-10k" firstAttribute="leading" secondItem="OXF-ge-2Wq" secondAttribute="leadingMargin" constant="12" id="9Lg-bF-NJG"/>
                     <constraint firstItem="nsn-Vj-10k" firstAttribute="top" secondItem="OXF-ge-2Wq" secondAttribute="topMargin" constant="4" id="9Mk-Xk-3HB"/>
-                    <constraint firstItem="74s-qI-kV0" firstAttribute="top" secondItem="zh7-Fc-mUj" secondAttribute="bottom" constant="3" id="Bhq-mB-jEG"/>
+                    <constraint firstItem="74s-qI-kV0" firstAttribute="top" secondItem="zh7-Fc-mUj" secondAttribute="bottom" constant="2" id="Bhq-mB-jEG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wyt-gF-er4" secondAttribute="trailing" constant="12" id="CHo-x1-CB2"/>
-                    <constraint firstItem="zh7-Fc-mUj" firstAttribute="leading" secondItem="nsn-Vj-10k" secondAttribute="trailing" constant="24" id="GDh-1H-6m6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="zh7-Fc-mUj" secondAttribute="trailing" constant="55" id="LgO-hq-8A0"/>
+                    <constraint firstItem="zh7-Fc-mUj" firstAttribute="leading" secondItem="nsn-Vj-10k" secondAttribute="trailing" constant="20" id="GDh-1H-6m6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zh7-Fc-mUj" secondAttribute="trailing" constant="56" id="LgO-hq-8A0"/>
                     <constraint firstItem="nsn-Vj-10k" firstAttribute="top" secondItem="wyt-gF-er4" secondAttribute="top" id="NRQ-0R-tPv"/>
-                    <constraint firstItem="wyt-gF-er4" firstAttribute="leading" secondItem="74s-qI-kV0" secondAttribute="trailing" constant="25" id="ZqW-kc-lA4"/>
+                    <constraint firstItem="wyt-gF-er4" firstAttribute="leading" secondItem="74s-qI-kV0" secondAttribute="trailing" constant="26" id="ZqW-kc-lA4"/>
                     <constraint firstItem="nsn-Vj-10k" firstAttribute="centerY" secondItem="OXF-ge-2Wq" secondAttribute="centerY" id="k6L-Rv-5rs"/>
                     <constraint firstItem="74s-qI-kV0" firstAttribute="leading" secondItem="zh7-Fc-mUj" secondAttribute="leading" id="ksw-mp-e7D"/>
-                    <constraint firstItem="zh7-Fc-mUj" firstAttribute="top" secondItem="OXF-ge-2Wq" secondAttribute="topMargin" id="n4Y-hw-fL7"/>
+                    <constraint firstItem="zh7-Fc-mUj" firstAttribute="top" secondItem="OXF-ge-2Wq" secondAttribute="topMargin" constant="1" id="n4Y-hw-fL7"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="159" y="301.5"/>

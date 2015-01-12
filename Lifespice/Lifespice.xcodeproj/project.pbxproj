@@ -16,13 +16,11 @@
 		CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */; };
 		CC0EB4121A58C4E5001F9A2E /* LifespiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */; };
 		CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */; };
-		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 		CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3B1A60EC2D001ED886 /* Event.swift */; };
 		CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3D1A610C2A001ED886 /* CustomCell.swift */; };
 		CC8CCDA51A63BF790088840F /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8CCDA41A63BF790088840F /* CustomCell.xib */; };
 		CC8CCDA71A63C3610088840F /* TransitionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDA61A63C3610088840F /* TransitionOperator.swift */; };
 		CC8CCDAB1A63CAD40088840F /* SlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */; };
-		CC8CCDAF1A63EB7C0088840F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */; };
 		CC9C7FBE1A61BFE100E329BD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBC1A61BFE000E329BD /* Bolts.framework */; };
 		CC9C7FBF1A61BFE100E329BD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBD1A61BFE100E329BD /* Parse.framework */; };
 		CC9C7FC11A61C10200E329BD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */; };
@@ -36,6 +34,8 @@
 		CC9C7FD11A61C14300E329BD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FCC1A61C14300E329BD /* SystemConfiguration.framework */; };
 		CC9C7FD31A61C18200E329BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FD21A61C18200E329BD /* libsqlite3.dylib */; };
 		CC9C7FD81A61C39000E329BD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FD71A61C39000E329BD /* libz.dylib */; };
+		CCC0120F1A63EF8F00255052 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0120D1A63EF8F00255052 /* MenuCell.swift */; };
+		CCC012101A63EF8F00255052 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC0120E1A63EF8F00255052 /* MenuCell.xib */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
 		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
@@ -69,13 +69,11 @@
 		CC0EB4101A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespiceTests.swift; sourceTree = "<group>"; };
 		CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
-		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		CC199C3B1A60EC2D001ED886 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CC199C3D1A610C2A001ED886 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; tabWidth = 3; };
 		CC8CCDA41A63BF790088840F /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CC8CCDA61A63C3610088840F /* TransitionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionOperator.swift; sourceTree = "<group>"; };
 		CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuViewController.swift; sourceTree = "<group>"; };
-		CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../MenuCell.swift; sourceTree = "<group>"; };
 		CC9C7FBC1A61BFE000E329BD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CC9C7FBD1A61BFE100E329BD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -90,6 +88,8 @@
 		CC9C7FD21A61C18200E329BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CC9C7FD41A61C29600E329BD /* Lifespice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lifespice-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC9C7FD71A61C39000E329BD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CCC0120D1A63EF8F00255052 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		CCC0120E1A63EF8F00255052 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
@@ -171,10 +171,11 @@
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
 				CC8CCDA61A63C3610088840F /* TransitionOperator.swift */,
 				CC199C3D1A610C2A001ED886 /* CustomCell.swift */,
-				CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */,
+				CC8CCDA41A63BF790088840F /* CustomCell.xib */,
+				CCC0120D1A63EF8F00255052 /* MenuCell.swift */,
+				CCC0120E1A63EF8F00255052 /* MenuCell.xib */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
 				CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */,
-				CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */,
 				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
 				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
 				CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */,
@@ -183,7 +184,6 @@
 				CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */,
 				CC199C3B1A60EC2D001ED886 /* Event.swift */,
 				CCD73A2E1A5E4E5400CC6628 /* Enums.swift */,
-				CC8CCDA41A63BF790088840F /* CustomCell.xib */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
 				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
@@ -301,6 +301,7 @@
 			files = (
 				CC0EB4011A58C4E5001F9A2E /* Main.storyboard in Resources */,
 				CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */,
+				CCC012101A63EF8F00255052 /* MenuCell.xib in Resources */,
 				CC8CCDA51A63BF790088840F /* CustomCell.xib in Resources */,
 				CC0EB4031A58C4E5001F9A2E /* Images.xcassets in Resources */,
 			);
@@ -322,10 +323,9 @@
 			files = (
 				CCD73A331A5E847F00CC6628 /* SetRepeatViewController.swift in Sources */,
 				CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */,
-				CC8CCDAF1A63EB7C0088840F /* MenuCell.swift in Sources */,
+				CCC0120F1A63EF8F00255052 /* MenuCell.swift in Sources */,
 				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
 				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
-				CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
 				CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,

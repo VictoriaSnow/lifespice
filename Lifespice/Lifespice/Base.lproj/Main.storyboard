@@ -252,7 +252,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN9-1d-7Fx">
-                                                            <rect key="frame" x="64" y="11" width="100" height="21"/>
+                                                            <rect key="frame" x="65" y="11" width="100" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="LV1-Qo-Qd7"/>
                                                             </constraints>
@@ -268,7 +268,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-Wh-aZt">
-                                                            <rect key="frame" x="184" y="11" width="20" height="21"/>
+                                                            <rect key="frame" x="185" y="11" width="20" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -277,10 +277,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="centerY" secondItem="xox-H8-14a" secondAttribute="centerY" id="EKf-hG-OiS"/>
                                                         <constraint firstAttribute="centerY" secondItem="QN9-1d-7Fx" secondAttribute="centerY" id="Fem-ff-jiA"/>
-                                                        <constraint firstItem="QN9-1d-7Fx" firstAttribute="leading" secondItem="xox-H8-14a" secondAttribute="trailing" constant="19" id="Nh9-WF-0hX"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="zT9-Wh-aZt" secondAttribute="trailing" constant="108" id="Ni6-Mn-e7y"/>
+                                                        <constraint firstItem="QN9-1d-7Fx" firstAttribute="leading" secondItem="xox-H8-14a" secondAttribute="trailing" constant="20" id="Nh9-WF-0hX"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="zT9-Wh-aZt" secondAttribute="trailing" constant="107" id="Ni6-Mn-e7y"/>
                                                         <constraint firstAttribute="centerY" secondItem="zT9-Wh-aZt" secondAttribute="centerY" id="ow0-lr-aI5"/>
-                                                        <constraint firstAttribute="centerX" secondItem="xox-H8-14a" secondAttribute="centerX" constant="128" id="pEM-1t-vzA"/>
                                                         <constraint firstItem="xox-H8-14a" firstAttribute="leading" secondItem="IJr-hn-t2M" secondAttribute="leadingMargin" constant="12" id="stf-0b-74U"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
