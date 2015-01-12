@@ -18,21 +18,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @IBOutlet weak var searchBar: UISearchBar!
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-    
-    override func viewWillAppear(animated: Bool) {
-//        self.tableView.rowHeight = 61
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
         
-        self.tableView.rowHeight = 61
+        self.tableView.rowHeight = 60
+        self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
+        tableView.reloadData()
 //        self.filter("")
 
     }
@@ -59,10 +57,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //    
 //    }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -112,14 +106,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     
     
-    /*
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
@@ -134,7 +128,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
     }
-    */
+    
 
     
     
