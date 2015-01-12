@@ -60,7 +60,6 @@ class NewEventViewController: UITableViewController {
 
     
     func configureView() {
-        navBar.title = "Edit Event"
         if let detail: Event = self.myEvent {
             if let savedTitle = self.textFieldTitle {
                 savedTitle.text = detail.eventTitle
@@ -74,14 +73,17 @@ class NewEventViewController: UITableViewController {
             }
             if let savedCategory = self.detailCategory {
                 savedCategory.text = detail.eventCategory
+                category = savedCategory.text!
 
             }
             if let savedReminder = self.detailReminder {
                 savedReminder.text = detail.eventReminder
+                reminder = savedReminder.text!
 
             }
             if let savedRepeat = self.detailRepeat {
                 savedRepeat.text = detail.eventRepeat
+                repeat = savedRepeat.text!
 
             }
             if let savedImportant = self.switchImportant {
@@ -100,7 +102,11 @@ class NewEventViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        navBar.title = "New Event"
+        if myEvent != nil {
+            navBar.title = "Edit Event"
+        } else {
+            navBar.title = "New Event"
+        }
         self.initTableView()
         self.configureView()
         
@@ -253,7 +259,7 @@ class NewEventViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        if segue.identifier == "SaveNewEvent" {
+        if segue.identifier == "SaveEvent" {
             let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
             
             let context: NSManagedObjectContext = appDel.managedObjectContext!
@@ -276,6 +282,11 @@ class NewEventViewController: UITableViewController {
                     myEvent?.eventImportant = true
                 } else {
                     myEvent?.eventImportant = false
+                }
+                if let parseEvent = self.myEvent {
+                    let event = self.myEvent
+                    (segue.destinationViewController as DetailViewController).detailItem = event
+                    
                 }
             } else {
                 let newEvent = Event(entity: entity!, insertIntoManagedObjectContext: context)

@@ -67,12 +67,12 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelEditEvent(segue:UIStoryboardSegue) {
+    @IBAction func cancelEvent(segue:UIStoryboardSegue) {
         
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func saveEditEvent(segue:UIStoryboardSegue) {
+    @IBAction func saveEvent(segue:UIStoryboardSegue) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     

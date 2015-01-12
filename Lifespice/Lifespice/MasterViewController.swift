@@ -64,12 +64,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     
-    @IBAction func cancelNewEvent(segue:UIStoryboardSegue) {
+    @IBAction func cancelEvent(segue:UIStoryboardSegue) {
         
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func saveNewEvent(segue:UIStoryboardSegue) {
+    @IBAction func saveEvent(segue:UIStoryboardSegue) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     

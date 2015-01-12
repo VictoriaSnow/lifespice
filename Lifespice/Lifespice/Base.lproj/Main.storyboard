@@ -533,12 +533,12 @@
                     <navigationItem key="navigationItem" title="Event" id="V8n-be-B9R">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="etG-dp-maL">
                             <connections>
-                                <segue destination="Ey3-6S-dBI" kind="unwind" identifier="CancelNewEvent" unwindAction="cancelNewEvent:" id="gTa-hq-ruI"/>
+                                <segue destination="Ey3-6S-dBI" kind="unwind" identifier="CancelEvent" unwindAction="cancelEvent:" id="gTa-hq-ruI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="wLd-v1-iQx">
                             <connections>
-                                <segue destination="Ey3-6S-dBI" kind="unwind" identifier="SaveNewEvent" unwindAction="saveNewEvent:" id="AIh-Jg-lBg"/>
+                                <segue destination="Ey3-6S-dBI" kind="unwind" identifier="SaveEvent" unwindAction="saveEvent:" id="AIh-Jg-lBg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -692,6 +692,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LQ8-li-qX7"/>
+        <segue reference="xjL-0f-WDc"/>
     </inferredMetricsTieBreakers>
 </document>
