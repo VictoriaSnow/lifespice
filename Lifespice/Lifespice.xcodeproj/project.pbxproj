@@ -16,7 +16,6 @@
 		CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */; };
 		CC0EB4121A58C4E5001F9A2E /* LifespiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */; };
 		CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */; };
-		CC0EB4201A58DD73001F9A2E /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */; };
 		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 		CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3B1A60EC2D001ED886 /* Event.swift */; };
 		CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3D1A610C2A001ED886 /* CustomCell.swift */; };
@@ -66,7 +65,6 @@
 		CC0EB4101A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC0EB4111A58C4E5001F9A2E /* LifespiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespiceTests.swift; sourceTree = "<group>"; };
 		CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
-		CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		CC199C3B1A60EC2D001ED886 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CC199C3D1A610C2A001ED886 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -165,7 +163,6 @@
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
 				CC199C3D1A610C2A001ED886 /* CustomCell.swift */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
-				CC0EB41F1A58DD73001F9A2E /* EditEventViewController.swift */,
 				CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */,
 				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
 				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
@@ -319,7 +316,6 @@
 				CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
 				CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */,
-				CC0EB4201A58DD73001F9A2E /* EditEventViewController.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
 				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
 				CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */,

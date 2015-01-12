@@ -11,7 +11,8 @@ import CoreData
 
 class NewEventViewController: UITableViewController {
 
-    
+    @IBOutlet weak var navBar: UINavigationItem!
+
     
     @IBOutlet weak var textFieldTitle: UITextField!
     
@@ -36,7 +37,17 @@ class NewEventViewController: UITableViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    
+    var myEvent: Event? {
+        didSet {
+            self.configureView()
+            
+        }
+    }
+    
+    
 
+    
     var selectedDate: NSDate = NSDate()
     var dateFormatter: NSDateFormatter = NSDateFormatter()
     var datePickerIsShown:Bool = false
@@ -46,6 +57,39 @@ class NewEventViewController: UITableViewController {
     var reminder: String = Reminder.ReminderType().rawValue
     var repeat: String = Repeat.RepeatType().rawValue
     var category: String = Category.CategoryTag().rawValue
+
+    
+    func configureView() {
+        navBar.title = "Edit Event"
+        if let detail: Event = self.myEvent {
+            if let savedTitle = self.textFieldTitle {
+                savedTitle.text = detail.eventTitle
+            }
+            if let savedDate = self.detailDate {
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateStyle = .LongStyle
+                dateFormatter.timeStyle = .NoStyle
+                savedDate.text = dateFormatter.stringFromDate(detail.eventDate)
+                datePicker.setDate(detail.eventDate, animated: true)
+            }
+            if let savedCategory = self.detailCategory {
+                savedCategory.text = detail.eventCategory
+
+            }
+            if let savedReminder = self.detailReminder {
+                savedReminder.text = detail.eventReminder
+
+            }
+            if let savedRepeat = self.detailRepeat {
+                savedRepeat.text = detail.eventRepeat
+
+            }
+            if let savedImportant = self.switchImportant {
+                savedImportant.setOn(detail.eventImportant.boolValue, animated: true)
+            }
+        }
+        
+    }
     
     
     override func viewDidLoad() {
@@ -56,13 +100,16 @@ class NewEventViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        initTableView()
+        navBar.title = "New Event"
+        self.initTableView()
+        self.configureView()
         
     }
     
+
     
     func initTableView() {
-        
+
         // Date
         self.setupDateLabel()
         self.datePicker.hidden = true
@@ -109,9 +156,7 @@ class NewEventViewController: UITableViewController {
     }
     
     
-    
-    
-    
+
     
     func setupDateLabel() {
         self.dateFormatter = NSDateFormatter()
@@ -214,47 +259,46 @@ class NewEventViewController: UITableViewController {
             let context: NSManagedObjectContext = appDel.managedObjectContext!
             
             let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: context)
-            let newEvent = Event(entity: entity!, insertIntoManagedObjectContext: context)
-            
-            newEvent.eventTitle = textFieldTitle.text
-            newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
-            newEvent.eventCategory = detailCategory.text!
-            newEvent.eventReminder = detailReminder.text!
-            newEvent.eventRepeat = detailRepeat.text!
-            if switchImportant.on {
-                newEvent.eventImportant = true
+            if myEvent != nil {
+                let myTitle = textFieldTitle.text
+                if myTitle == "" {
+                    myEvent?.eventTitle = "Untitled Event"
+                } else {
+                    myEvent?.eventTitle = textFieldTitle.text
+                }
+                
+                myEvent?.eventDate = dateFormatter.dateFromString(detailDate.text!)!
+                myEvent?.eventCategory = detailCategory.text!
+                myEvent?.eventReminder = detailReminder.text!
+                myEvent?.eventRepeat = detailRepeat.text!
+                
+                if switchImportant.on {
+                    myEvent?.eventImportant = true
+                } else {
+                    myEvent?.eventImportant = false
+                }
             } else {
-                newEvent.eventImportant = false
+                let newEvent = Event(entity: entity!, insertIntoManagedObjectContext: context)
+                let title = textFieldTitle.text
+                if title == "" {
+                    newEvent.eventTitle = "Untitled Event"
+                } else {
+                    newEvent.eventTitle = textFieldTitle.text
+                }
+                
+                newEvent.eventDate = dateFormatter.dateFromString(detailDate.text!)!
+                newEvent.eventCategory = detailCategory.text!
+                newEvent.eventReminder = detailReminder.text!
+                newEvent.eventRepeat = detailRepeat.text!
+                if switchImportant.on {
+                    newEvent.eventImportant = true
+                } else {
+                    newEvent.eventImportant = false
+                }
             }
-            context.save(nil)
-            
-//            let newEvent = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
-//            newEvent.setValue(textFieldTitle.text, forKey: "eventTitle")
-//            newEvent.setValue(dateFormatter.dateFromString(detailDate.text!), forKey: "eventDate")
-//            newEvent.setValue(detailCategory.text!, forKey: "eventCategory")
-//            newEvent.setValue(detailReminder.text!, forKey: "eventReminder")
-//            newEvent.setValue(detailRepeat.text!, forKey: "eventRepeat")
-//            
-//            if switchImportant.on {
-//                newEvent.setValue(true, forKey: "eventImportant")
-//            } else {
-//                newEvent.setValue(false, forKey: "eventImportant")
-//            }
-            
-//            var error: NSError?
-//            if !context.save(&error) {
-//                println("Could not save \(error), \(error?.userInfo)")
-//            }
-            
 
-//
-//            println("New Event Title: " + newEvent.eventTitle)
-//            println("New Event Date: " + newEvent.eventDate.description)
-//            println("New Event Category: " + newEvent.eventCategory)
-//            println("New Event Reminder: " + newEvent.eventReminder)
-//            println("New Event Repeat: " + newEvent.eventRepeat)
-//            println("New Event Important: " + newEvent.eventImportant)
-//            println("All Data Saved")
+
+            context.save(nil)
         }
         
         if segue.identifier == "SetReminder" {

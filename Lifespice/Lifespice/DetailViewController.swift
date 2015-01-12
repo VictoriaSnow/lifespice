@@ -30,12 +30,14 @@ class DetailViewController: UIViewController {
         if let detail: Event = self.detailItem {
             if let title = self.eventTitleLabel {
                 title.text = detail.eventTitle
+//                println(title.text!)
             }
             if let date = self.eventDateLabel {
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateStyle = .LongStyle
                 dateFormatter.timeStyle = .NoStyle
                 date.text = dateFormatter.stringFromDate(detail.eventDate)
+//                println(date.text!)
             }
             if let countdown = self.eventCountdownLabel {
                 let daysLeft = self.countdownDays(detail.eventDate)
@@ -63,6 +65,25 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func cancelEditEvent(segue:UIStoryboardSegue) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func saveEditEvent(segue:UIStoryboardSegue) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EditEvent" {
+            if let myEvent = self.detailItem {
+                let event = self.detailItem
+                (segue.destinationViewController as NewEventViewController).myEvent = event
+
+            }
+        }
     }
 
 
