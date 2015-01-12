@@ -13,8 +13,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var managedObjectContext: NSManagedObjectContext? = nil
     
-    var searchResultsContext: NSManagedObjectContext? = nil
+    
 
+
+    @IBOutlet weak var menuItem: UIBarButtonItem!
+    
+    var transitionOperator = TransitionOperator()
+    
+    
+    
+    var searchResultsContext: NSManagedObjectContext? = nil
 
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -75,7 +83,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
   
     // MARK: - Segues
-
+    @IBAction func presentMenu(sender: AnyObject?){
+        performSegueWithIdentifier("presentMenu", sender: self)
+    }
+    
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
@@ -83,6 +96,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             (segue.destinationViewController as DetailViewController).detailItem = event
             }
         }
+        
+
+        let toViewController = segue.destinationViewController as UIViewController
+        self.modalPresentationStyle = UIModalPresentationStyle.Custom
+        toViewController.transitioningDelegate = self.transitionOperator
+        
     }
     
 

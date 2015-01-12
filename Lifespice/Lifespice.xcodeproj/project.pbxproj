@@ -19,6 +19,10 @@
 		CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */; };
 		CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3B1A60EC2D001ED886 /* Event.swift */; };
 		CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC199C3D1A610C2A001ED886 /* CustomCell.swift */; };
+		CC8CCDA51A63BF790088840F /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8CCDA41A63BF790088840F /* CustomCell.xib */; };
+		CC8CCDA71A63C3610088840F /* TransitionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDA61A63C3610088840F /* TransitionOperator.swift */; };
+		CC8CCDAB1A63CAD40088840F /* SlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */; };
+		CC8CCDAF1A63EB7C0088840F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */; };
 		CC9C7FBE1A61BFE100E329BD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBC1A61BFE000E329BD /* Bolts.framework */; };
 		CC9C7FBF1A61BFE100E329BD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FBD1A61BFE100E329BD /* Parse.framework */; };
 		CC9C7FC11A61C10200E329BD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */; };
@@ -68,6 +72,10 @@
 		CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		CC199C3B1A60EC2D001ED886 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CC199C3D1A610C2A001ED886 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; tabWidth = 3; };
+		CC8CCDA41A63BF790088840F /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CC8CCDA61A63C3610088840F /* TransitionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionOperator.swift; sourceTree = "<group>"; };
+		CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuViewController.swift; sourceTree = "<group>"; };
+		CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../MenuCell.swift; sourceTree = "<group>"; };
 		CC9C7FBC1A61BFE000E329BD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CC9C7FBD1A61BFE100E329BD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CC9C7FC01A61C10100E329BD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -161,8 +169,11 @@
 				CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */,
 				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
+				CC8CCDA61A63C3610088840F /* TransitionOperator.swift */,
 				CC199C3D1A610C2A001ED886 /* CustomCell.swift */,
+				CC8CCDAE1A63EB7C0088840F /* MenuCell.swift */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
+				CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */,
 				CC0EB4211A58DDF1001F9A2E /* SideBarViewController.swift */,
 				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
 				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
@@ -172,6 +183,7 @@
 				CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */,
 				CC199C3B1A60EC2D001ED886 /* Event.swift */,
 				CCD73A2E1A5E4E5400CC6628 /* Enums.swift */,
+				CC8CCDA41A63BF790088840F /* CustomCell.xib */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
 				CC0EB4041A58C4E5001F9A2E /* LaunchScreen.xib */,
@@ -289,6 +301,7 @@
 			files = (
 				CC0EB4011A58C4E5001F9A2E /* Main.storyboard in Resources */,
 				CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */,
+				CC8CCDA51A63BF790088840F /* CustomCell.xib in Resources */,
 				CC0EB4031A58C4E5001F9A2E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,14 +322,17 @@
 			files = (
 				CCD73A331A5E847F00CC6628 /* SetRepeatViewController.swift in Sources */,
 				CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */,
+				CC8CCDAF1A63EB7C0088840F /* MenuCell.swift in Sources */,
 				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
 				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
 				CC0EB4221A58DDF1001F9A2E /* SideBarViewController.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
 				CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
+				CC8CCDAB1A63CAD40088840F /* SlideOutMenuViewController.swift in Sources */,
 				CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
+				CC8CCDA71A63C3610088840F /* TransitionOperator.swift in Sources */,
 				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
 				CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */,
 				CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */,
