@@ -38,6 +38,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         self.tableView.rowHeight = 60
         self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
+        
+/*        var nib = UINib(nibName: "CustomCell", bundle: nil)
+        self.searchDisplayController!.searchResultsTableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+*/
+
         tableView.reloadData()
 //        self.filter("")
 
@@ -124,7 +130,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     
     
-    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
