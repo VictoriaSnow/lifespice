@@ -226,11 +226,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var detail: DetailViewController = DetailViewController()
         if (searchIsActive) {
-            detail.detailItem = self.filteredData!.objectAtIndex(indexPath.row) as Event
+            detail.detailItem = self.filteredData!.objectAtIndex(indexPath.row) as? Event
             self.performSegueWithIdentifier("showDetail", sender: self)
             
         }else{
-            detail.detailItem = self.allData!.objectAtIndex(indexPath.row) as Event
+            detail.detailItem = self.allData!.objectAtIndex(indexPath.row) as? Event
             self.performSegueWithIdentifier("showDetail", sender: self)
             
         }
