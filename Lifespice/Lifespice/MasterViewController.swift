@@ -51,10 +51,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         allData = fetchedResultsController.fetchedObjects
         self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
         var nib = UINib(nibName: "CustomCell", bundle: nil)
-/*        var nib = UINib(nibName: "CustomCell", bundle: nil)
-        self.searchDisplayController!.searchResultsTableView.registerNib(nib, forCellReuseIdentifier: "Cell")
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
-*/
+
         self.searchDisplayController!.searchResultsTableView.registerNib(nib, forCellReuseIdentifier: "Cell")
         self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
         
@@ -65,9 +62,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     
     func filter(searchText: NSString) {
+        
         var filteredPredicate: NSPredicate = NSPredicate(format: "eventTitle CONTAINS[c] %@", searchText)!
         filteredData = allData!.filteredArrayUsingPredicate(filteredPredicate)
-    
     }
     
     func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
@@ -75,29 +72,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 		return true
         
     }
-//
-//    func filter(searchText: NSString) {
-//        var filteredData = NSMutableArray()
-//        let filteredRequest: NSFetchRequest = NSFetchRequest()
-//        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
-//        filteredRequest.entity = entity
-//        
-//        let sortDescriptor = NSSortDescriptor(key: "eventDate", ascending: true)
-//        let sortDescriptors = [sortDescriptor]
-//        
-//        filteredRequest.sortDescriptors = [sortDescriptor]
-//        
-//        if (searchText.length > 0) {
-//            var filteredPredicate: NSPredicate = NSPredicate(format: "name CONTAINS[c] %@", searchText)!
-//            filteredRequest.predicate = filteredPredicate
-//        }
-//        
-//        var loadedEntities: NSArray? = managedObjectContext?.executeFetchRequest(filteredRequest, error: nil)
-//        filteredData = NSMutableArray(array: loadedEntities!)
-//        self.tableView.reloadData()
-//    
-    
-//    }
+
     
     @IBAction func menuTapped(sender: AnyObject) {
         
@@ -114,6 +89,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func searchDisplayControllerDidBeginSearch(controller: UISearchDisplayController) {
         self.searchIsActive = true
         }
+    
     func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController) {
         self.searchIsActive = false
         }
@@ -194,7 +170,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as CustomCell
 //        self.configureCell(cell, atIndexPath: indexPath)
-        var event = allData!.objectAtIndex(indexPath.row) as Event
+        allData = fetchedResultsController.fetchedObjects
+        var event = allData?.objectAtIndex(indexPath.row) as Event
         if (searchIsActive) {
             event = filteredData!.objectAtIndex(indexPath.row) as Event
         }
@@ -259,28 +236,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
     
-//    func configureCell(cell: CustomCell, atIndexPath indexPath: NSIndexPath) {
-//        if (searchIsActive) {
-//            event = filteredData!.objectAtIndex(indexPath.row) as Event
-//        }
-//        if event.eventTitle == "" {
-//            cell.cellTitleLabel.text = "Untitled Event"
-//        } else {
-//            cell.cellTitleLabel.text = event.eventTitle
-//            
-//        }
-//        let dateFormatter = NSDateFormatter()
-//        dateFormatter.dateStyle = .LongStyle
-//        dateFormatter.timeStyle = .NoStyle
-//        cell.cellDateLabel.text = dateFormatter.stringFromDate(event.eventDate)
-//        
-//        
-//        cell.cellImageView.image = UIImage(named: event.eventCategory + "@icon")
-//        
-//        var countdown:Int = cell.countdownDays(event.eventDate)
-//        cell.cellNumberLabel.text = toString(countdown)
-//
-//    }
 
     
     // MARK: - Fetched results controller
@@ -303,7 +258,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let sortDescriptors = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
-        allData = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
+        
+//        allData = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".

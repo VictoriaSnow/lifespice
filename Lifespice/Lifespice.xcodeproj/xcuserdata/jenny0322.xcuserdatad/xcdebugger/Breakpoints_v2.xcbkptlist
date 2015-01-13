@@ -2,4 +2,122 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lifespice/MasterViewController.swift"
+            timestampString = "442877212.502982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "MasterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.searchBar.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISearchBar&gt;"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.596901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.searchBar.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISearchBar&gt;"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.598246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.searchBar.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISearchBar&gt;"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.598449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.init (Lifespice.MasterViewController.Type)(style : C.UITableViewStyle) -&gt; Lifespice.MasterViewController"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.598652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.init (Lifespice.MasterViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Lifespice.MasterViewController"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.598856"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "325">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.init (Lifespice.MasterViewController.Type)() -&gt; Lifespice.MasterViewController"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.599024"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "247">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifespice.MasterViewController.init (Lifespice.MasterViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Lifespice.MasterViewController"
+                  moduleName = "Lifespice"
+                  urlString = "file:///Users/jenny0322/Documents/LifeSpice/Lifespice/Lifespice/MasterViewController.swift"
+                  timestampString = "442877212.599192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "255">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

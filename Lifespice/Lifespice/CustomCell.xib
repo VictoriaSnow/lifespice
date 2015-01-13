@@ -59,6 +59,12 @@
                     <constraint firstItem="zh7-Fc-mUj" firstAttribute="top" secondItem="OXF-ge-2Wq" secondAttribute="topMargin" constant="1" id="n4Y-hw-fL7"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cellDateLabel" destination="74s-qI-kV0" id="GH0-8Q-Dal"/>
+                <outlet property="cellImageView" destination="nsn-Vj-10k" id="EGV-nc-Du3"/>
+                <outlet property="cellNumberLabel" destination="wyt-gF-er4" id="6xV-Ns-enS"/>
+                <outlet property="cellTitleLabel" destination="zh7-Fc-mUj" id="MOL-h6-BDz"/>
+            </connections>
             <point key="canvasLocation" x="159" y="301.5"/>
         </tableViewCell>
     </objects>
