@@ -14,7 +14,9 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var cellDateLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellNumberLabel: UILabel!
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     func countdownDays(eventDate: NSDate) -> Int {
         if (isToday(eventDate)) {
             return 0

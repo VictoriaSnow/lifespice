@@ -21,7 +21,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var managedObjectContext: NSManagedObjectContext? = nil
     var delegate: MasterViewControllerDelegate?
     
-
+    var allData: NSArray? = nil
+    var filteredData: NSArray? = nil
+    var searchIsActive: Bool = false
 
     @IBOutlet weak var menuItem: UIBarButtonItem!
     
@@ -42,20 +44,38 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
+        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
         
         self.tableView.rowHeight = 60
         self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
-        
+        allData = fetchedResultsController.fetchedObjects
+        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
+        var nib = UINib(nibName: "CustomCell", bundle: nil)
 /*        var nib = UINib(nibName: "CustomCell", bundle: nil)
         self.searchDisplayController!.searchResultsTableView.registerNib(nib, forCellReuseIdentifier: "Cell")
         self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
 */
-
+        self.searchDisplayController!.searchResultsTableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        
         tableView.reloadData()
 //        self.filter("")
 
     }
-//    
+    
+    
+    func filter(searchText: NSString) {
+        var filteredPredicate: NSPredicate = NSPredicate(format: "eventTitle CONTAINS[c] %@", searchText)!
+        filteredData = allData!.filteredArrayUsingPredicate(filteredPredicate)
+    
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.filter(searchString)
+		return true
+        
+    }
+//
 //    func filter(searchText: NSString) {
 //        var filteredData = NSMutableArray()
 //        let filteredRequest: NSFetchRequest = NSFetchRequest()
@@ -76,6 +96,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //        filteredData = NSMutableArray(array: loadedEntities!)
 //        self.tableView.reloadData()
 //    
+    
 //    }
     
     @IBAction func menuTapped(sender: AnyObject) {
@@ -88,6 +109,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func searchDisplayControllerDidBeginSearch(controller: UISearchDisplayController) {
+        self.searchIsActive = true
+        }
+    func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController) {
+        self.searchIsActive = false
+        }
     
     func itemSelected(menuItem: MenuModel) {
         delegate?.collapseSidePanels?()
@@ -111,13 +140,29 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showDetail" {
+//            if let indexPath = self.tableView.indexPathForSelectedRow() {
+//            let event = self.fetchedResultsController.objectAtIndexPath(indexPath) as Event
+//            (segue.destinationViewController as DetailViewController).detailItem = event
+//            }
+//        }
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-            let event = self.fetchedResultsController.objectAtIndexPath(indexPath) as Event
-            (segue.destinationViewController as DetailViewController).detailItem = event
+            var destination: DetailViewController = segue.destinationViewController as DetailViewController
+            
+            if (searchIsActive) {
+                if let indexPath = searchDisplayController?.searchResultsTableView.indexPathForSelectedRow() {
+                    let event = self.filteredData!.objectAtIndex(indexPath.row) as Event
+                    destination.detailItem = event
+                }
+            }else{
+                if let indexPath = self.tableView.indexPathForSelectedRow() {
+                    let event = self.fetchedResultsController.objectAtIndexPath(indexPath) as Event
+                    destination.detailItem = event
+                    
+                }
+                
             }
         }
-        
 
         let toViewController = segue.destinationViewController as UIViewController
         self.modalPresentationStyle = UIModalPresentationStyle.Custom
@@ -133,13 +178,42 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
-        return sectionInfo.numberOfObjects
+        var num: Int = 0
+        if (searchIsActive) {
+            num = filteredData!.count
+            
+            
+        }else{
+            
+            let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+            num = sectionInfo.numberOfObjects
+        }
+        return num
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as CustomCell
-        self.configureCell(cell, atIndexPath: indexPath)
+//        self.configureCell(cell, atIndexPath: indexPath)
+        var event = allData!.objectAtIndex(indexPath.row) as Event
+        if (searchIsActive) {
+            event = filteredData!.objectAtIndex(indexPath.row) as Event
+        }
+        if event.eventTitle == "" {
+            cell.cellTitleLabel.text = "Untitled Event"
+        } else {
+            cell.cellTitleLabel.text = event.eventTitle
+            
+        }
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .LongStyle
+        dateFormatter.timeStyle = .NoStyle
+        cell.cellDateLabel.text = dateFormatter.stringFromDate(event.eventDate)
+        
+        
+        cell.cellImageView.image = UIImage(named: event.eventCategory + "@icon")
+        
+        var countdown:Int = cell.countdownDays(event.eventDate)
+        cell.cellNumberLabel.text = toString(countdown)
         return cell
     }
 
@@ -172,30 +246,41 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
 
-    
-    
-    func configureCell(cell: CustomCell, atIndexPath indexPath: NSIndexPath) {
-        let event = self.fetchedResultsController.objectAtIndexPath(indexPath) as Event
-        if event.eventTitle == "" {
-            cell.cellTitleLabel.text = "Untitled Event"
-        } else {
-            cell.cellTitleLabel.text = event.eventTitle
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var detail: DetailViewController = DetailViewController()
+        if (searchIsActive) {
+            detail.detailItem = self.filteredData!.objectAtIndex(indexPath.row) as Event
+            self.performSegueWithIdentifier("showDetail", sender: self)
+            
+        }else{
+            detail.detailItem = self.allData!.objectAtIndex(indexPath.row) as Event
+            self.performSegueWithIdentifier("showDetail", sender: self)
+            
         }
-
-
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .LongStyle
-        dateFormatter.timeStyle = .NoStyle
-        cell.cellDateLabel.text = dateFormatter.stringFromDate(event.eventDate)
-
-        
-        cell.cellImageView.image = UIImage(named: event.eventCategory + "@icon")
-        
-        var countdown:Int = cell.countdownDays(event.eventDate)
-        cell.cellNumberLabel.text = toString(countdown)
-
     }
+    
+//    func configureCell(cell: CustomCell, atIndexPath indexPath: NSIndexPath) {
+//        if (searchIsActive) {
+//            event = filteredData!.objectAtIndex(indexPath.row) as Event
+//        }
+//        if event.eventTitle == "" {
+//            cell.cellTitleLabel.text = "Untitled Event"
+//        } else {
+//            cell.cellTitleLabel.text = event.eventTitle
+//            
+//        }
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateStyle = .LongStyle
+//        dateFormatter.timeStyle = .NoStyle
+//        cell.cellDateLabel.text = dateFormatter.stringFromDate(event.eventDate)
+//        
+//        
+//        cell.cellImageView.image = UIImage(named: event.eventCategory + "@icon")
+//        
+//        var countdown:Int = cell.countdownDays(event.eventDate)
+//        cell.cellNumberLabel.text = toString(countdown)
+//
+//    }
 
     
     // MARK: - Fetched results controller
@@ -218,6 +303,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let sortDescriptors = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
+        allData = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
