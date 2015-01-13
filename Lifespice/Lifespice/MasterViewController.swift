@@ -9,10 +9,17 @@
 import UIKit
 import CoreData
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+@objc
+
+protocol MasterViewControllerDelegate {
+    optional func toggleLeftPanel()
+    optional func collapseSidePanels()
+}
+
+class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, SlideOutMenuViewControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
-    
+    var delegate: MasterViewControllerDelegate?
     
 
 
@@ -71,12 +78,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //    
 //    }
     
+    @IBAction func menuTapped(sender: AnyObject) {
+        
+        
+        delegate?.toggleLeftPanel?()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func itemSelected(menuItem: MenuModel) {
+        delegate?.collapseSidePanels?()
+    }
     
     @IBAction func cancelEvent(segue:UIStoryboardSegue) {
         

@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 Lifespice. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import UIKit
+
+
+//@objc
+protocol SlideOutMenuViewControllerDelegate {
+    func itemSelected(menuItem: MenuModel)
+}
 
 class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,7 +23,10 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var overlayView: UIView!
     
-    var items: [MenuModel]!
+    var delegate: SlideOutMenuViewControllerDelegate?
+    
+//    var items: [MenuModel]!
+    let items = MenuModel.allMenuItems()
     
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
@@ -36,16 +45,16 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
         tableView.backgroundColor = UIColor.clearColor()
         tableView.rowHeight = 44
         
-        overlayView.backgroundColor = UIColor(white: 0.0, alpha: 0.3)
-        let item1 = MenuModel(title: "Home", icon: "icon-home")
-        let item2 = MenuModel(title: "Categories", icon: "icon-categories", count: "3")
-        let item3 = MenuModel(title: "Important", icon: "icon-important", count: "2")
-        let item4 = MenuModel(title: "Reminders", icon: "icon-reminders", count: "4")
-        let item5 = MenuModel(title: "Settings", icon: "icon-settings")
-        let item6 = MenuModel(title: "Help", icon: "icon-help")
-        let item7 = MenuModel(title: "Sign out", icon: "icon-signout")
-        
-        items = [item1, item2, item3, item4, item5, item6, item7]
+//        overlayView.backgroundColor = UIColor(white: 0.0, alpha: 0.3)
+        overlayView.backgroundColor = UIColor.clearColor()
+//        let item1 = MenuModel(title: "Home", icon: "icon-home", count: "14")
+//        let item2 = MenuModel(title: "Categories", icon: "icon-categories", count: "3")
+//        let item3 = MenuModel(title: "Important", icon: "icon-important", count: "2")
+//        let item4 = MenuModel(title: "Settings", icon: "icon-settings")
+//        let item5 = MenuModel(title: "Help", icon: "icon-help")
+//        let item6 = MenuModel(title: "Sign out", icon: "icon-signout")
+//        
+//        items = [item1, item2, item3, item4, item5, item6]
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +63,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -62,7 +71,6 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell") as MenuCell
         
         let item = items[indexPath.row]
-        
         cell.titleLabel.text = item.title
         cell.countLabel.text = item.count
         cell.iconImageView.image = UIImage(named: item.icon)
@@ -88,20 +96,23 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
 
 }
 
-class MenuModel {
-    var title : String!
-    var icon : String!
-    var count : String?
-    
-    init(title: String, icon : String){
-        self.title = title
-        self.icon = icon
-    }
-    
-    init(title: String, icon : String, count: String){
-        
-        self.title = title
-        self.icon = icon
-        self.count = count
-    }
-}
+//class MenuModel {
+//    var title : String!
+//    var icon : String!
+//    var count : String?
+//    
+//    init(title: String, icon : String){
+//        self.title = title
+//        self.icon = icon
+//    }
+//    
+//    init(title: String, icon : String, count: String){
+//        
+//        self.title = title
+//        self.icon = icon
+//        self.count = count
+//    }
+//    class func allMenuItems() -> Array<MenuModel> {
+//        return items
+//    }
+//}

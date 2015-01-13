@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc
+
 class Category {
     enum CategoryTag: String {
         case Private = "Private", Work = "Work", School = "School", Birthday = "Birthday", Holiday = "Holiday", Anniversary = "Anniversary"

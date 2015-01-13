@@ -35,8 +35,8 @@ class TransitionOperator: NSObject, UIViewControllerAnimatedTransitioning, UIVie
         let toView = toViewController!.view
         
         let size = toView.frame.size
-        var offSetTransform = CGAffineTransformMakeTranslation(size.width - 120, 0)
-        offSetTransform = CGAffineTransformScale(offSetTransform, 0.6, 0.6)
+        var offSetTransform = CGAffineTransformMakeTranslation(size.width - 76, 0)
+//        offSetTransform = CGAffineTransformScale(offSetTransform, 0.6, 0.6)
         
         snapshot = fromView.snapshotViewAfterScreenUpdates(true)
         
