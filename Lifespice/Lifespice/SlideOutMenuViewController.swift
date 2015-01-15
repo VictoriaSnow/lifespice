@@ -23,6 +23,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var overlayView: UIView!
     
+    
     var delegate: SlideOutMenuViewControllerDelegate?
     
 //    var items: [MenuModel]!
@@ -57,6 +58,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
 //        items = [item1, item2, item3, item4, item5, item6]
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,7 +84,12 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
 
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

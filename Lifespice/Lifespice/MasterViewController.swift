@@ -96,6 +96,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     func itemSelected(menuItem: MenuModel) {
         delegate?.collapseSidePanels?()
+        if (menuItem.title == "Important") {
+            self.filterImportant()
+        }
+    }
+    
+    func filterImportant() {
+        var importantPredicate: NSPredicate = NSPredicate(format: "eventImportant == true")!
+        filteredData = allData!.filteredArrayUsingPredicate(importantPredicate)
+
     }
     
     @IBAction func cancelEvent(segue:UIStoryboardSegue) {
