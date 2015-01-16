@@ -29,6 +29,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var filteredData: NSArray? = nil
     var searchIsActive: Bool = false
 
+    @IBOutlet weak var navBar: UINavigationItem!
 
     
     var transitionOperator = TransitionOperator()
@@ -76,12 +77,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         //        imageView.image = animal.image
         //        titleLabel.text = animal.title
         //        creatorLabel.text = animal.creator
-        if(menuItem.title == "Settings") {
-            println("settings")
-            let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
-            navigationController?.pushViewController(vc, animated: true)
-        }
+
+//        if(menuItem.title == "Home") {
+//            println("Home")
+//            navBar.title = "Daybox"
+//            tableView.reloadData()
+//        }
+//        if(menuItem.title == "Settings") {
+//            println("settings")
+//            let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+//            navigationController?.pushViewController(vc, animated: true)
+//        } else if(menuItem.title == "Important") {
+//            println("important")
+//            navBar.title = "Important"
+//            self.filterImportant()
+//        }
+        
         delegate?.collapseSidePanels?()
+
     }
 
     

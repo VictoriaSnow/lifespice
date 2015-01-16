@@ -42,7 +42,9 @@
 		CCCFB7671A68919D00586652 /* SlideOutMenuCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */; };
 		CCCFB7741A68C2A900586652 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7731A68C2A900586652 /* SlideMenuController.swift */; };
 		CCCFB7771A68DFB700586652 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7751A68DFB700586652 /* SettingsViewController.swift */; };
-		CCCFB7781A68DFB700586652 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCFB7761A68DFB700586652 /* SettingsViewController.xib */; };
+		CCCFB77C1A69039D00586652 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB77B1A69039D00586652 /* CategoriesViewController.swift */; };
+		CCCFB77E1A690D7500586652 /* FilteredEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB77D1A690D7500586652 /* FilteredEventListViewController.swift */; };
+		CCCFB7801A69142500586652 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB77F1A69142500586652 /* HelpViewController.swift */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
 		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
@@ -103,7 +105,9 @@
 		CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuCopy.swift; sourceTree = "<group>"; };
 		CCCFB7731A68C2A900586652 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		CCCFB7751A68DFB700586652 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		CCCFB7761A68DFB700586652 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		CCCFB77B1A69039D00586652 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		CCCFB77D1A690D7500586652 /* FilteredEventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredEventListViewController.swift; sourceTree = "<group>"; };
+		CCCFB77F1A69142500586652 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
@@ -179,20 +183,18 @@
 		CC0EB3F31A58C4E5001F9A2E /* Lifespice */ = {
 			isa = PBXGroup;
 			children = (
-				CCCFB7751A68DFB700586652 /* SettingsViewController.swift */,
-				CCCFB7761A68DFB700586652 /* SettingsViewController.xib */,
 				CCF8C3D91A5F81A2002CEFAA /* AppPlayground.playground */,
 				CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */,
 				CCCFB7731A68C2A900586652 /* SlideMenuController.swift */,
 				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
-				CC8CCDA61A63C3610088840F /* TransitionOperator.swift */,
 				CC199C3D1A610C2A001ED886 /* CustomCell.swift */,
 				CC8CCDA41A63BF790088840F /* CustomCell.xib */,
 				CCC0120D1A63EF8F00255052 /* MenuCell.swift */,
 				CCC0120E1A63EF8F00255052 /* MenuCell.xib */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
 				CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */,
+				CC0982801A651140004E4BE0 /* ContainerViewController.swift */,
 				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
 				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
 				CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */,
@@ -201,9 +203,13 @@
 				CCF8C3DA1A5F864B002CEFAA /* Reminder.swift */,
 				CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */,
 				CC199C3B1A60EC2D001ED886 /* Event.swift */,
+				CCCFB77D1A690D7500586652 /* FilteredEventListViewController.swift */,
 				CCCFB7641A68912500586652 /* MasterCopy.swift */,
 				CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */,
-				CC0982801A651140004E4BE0 /* ContainerViewController.swift */,
+				CCCFB7751A68DFB700586652 /* SettingsViewController.swift */,
+				CCCFB77B1A69039D00586652 /* CategoriesViewController.swift */,
+				CCCFB77F1A69142500586652 /* HelpViewController.swift */,
+				CC8CCDA61A63C3610088840F /* TransitionOperator.swift */,
 				CCD73A2E1A5E4E5400CC6628 /* Enums.swift */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
@@ -321,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0EB4011A58C4E5001F9A2E /* Main.storyboard in Resources */,
-				CCCFB7781A68DFB700586652 /* SettingsViewController.xib in Resources */,
 				CC0EB4061A58C4E5001F9A2E /* LaunchScreen.xib in Resources */,
 				CCC012101A63EF8F00255052 /* MenuCell.xib in Resources */,
 				CC8CCDA51A63BF790088840F /* CustomCell.xib in Resources */,
@@ -346,12 +351,14 @@
 				CCD73A331A5E847F00CC6628 /* SetRepeatViewController.swift in Sources */,
 				CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */,
 				CCC0120F1A63EF8F00255052 /* MenuCell.swift in Sources */,
+				CCCFB7801A69142500586652 /* HelpViewController.swift in Sources */,
 				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
 				CCCFB7741A68C2A900586652 /* SlideMenuController.swift in Sources */,
 				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
 				CCCFB7651A68912500586652 /* MasterCopy.swift in Sources */,
 				CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */,
+				CCCFB77C1A69039D00586652 /* CategoriesViewController.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
 				CC8CCDAB1A63CAD40088840F /* SlideOutMenuViewController.swift in Sources */,
 				CC0982831A651DD4004E4BE0 /* Menu.swift in Sources */,
@@ -363,6 +370,7 @@
 				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
 				CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */,
 				CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */,
+				CCCFB77E1A690D7500586652 /* FilteredEventListViewController.swift in Sources */,
 				CC0EB41E1A58DD2E001F9A2E /* NewEventViewController.swift in Sources */,
 				CC0982811A651140004E4BE0 /* ContainerViewController.swift in Sources */,
 				CC0EB3FE1A58C4E5001F9A2E /* DetailViewController.swift in Sources */,

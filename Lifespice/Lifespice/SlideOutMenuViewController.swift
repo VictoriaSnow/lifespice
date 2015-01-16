@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Lifespice. All rights reserved.
 //
 
-
+import Foundation
 import UIKit
 
 
@@ -76,13 +76,17 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedMenuItem = menuItems[indexPath.row]
+        println("selected \(selectedMenuItem.title)")
+        var userDefaults = NSUserDefaults()
+        userDefaults.setValue(selectedMenuItem.title, forKey: "Menu")
         delegate?.menuItemSelected(selectedMenuItem)
 //        if(selectedMenuItem.title == "Settings") {
+//            print("settings")
 //            let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
 //            navigationController?.pushViewController(vc, animated: true)
 //        }
 
-        dismissViewControllerAnimated(true, completion: nil)
+//        dismissViewControllerAnimated(true, completion: nil)
     }
     
 

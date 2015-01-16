@@ -8,16 +8,19 @@
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class SettingsViewController: MasterViewController {
         
+
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+//        super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +28,10 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func subMenuTapped(sender: AnyObject) {
+        delegate?.toggleSlideOutMenu?()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

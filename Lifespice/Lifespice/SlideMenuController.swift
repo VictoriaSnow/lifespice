@@ -1,8 +1,9 @@
-////
-////  SlideMenuController.swift
-////
-////  Created by Yuji Hato on 12/3/14.
-////
+//
+//  SlideMenuController.swift
+//  Lifespice
+//
+//  Created by Victoria Bian on 1/15/15.
+//  Copyright (c) 2015 Lifespice. All rights reserved.
 //
 //import Foundation
 //import UIKit
