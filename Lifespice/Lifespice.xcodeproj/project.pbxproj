@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC0982811A651140004E4BE0 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0982801A651140004E4BE0 /* ContainerViewController.swift */; };
-		CC0982831A651DD4004E4BE0 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0982821A651DD4004E4BE0 /* MenuModel.swift */; };
+		CC0982831A651DD4004E4BE0 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0982821A651DD4004E4BE0 /* Menu.swift */; };
 		CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */; };
 		CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3F81A58C4E5001F9A2E /* Lifespice.xcdatamodeld */; };
 		CC0EB3FC1A58C4E5001F9A2E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */; };
@@ -38,6 +38,8 @@
 		CC9C7FD81A61C39000E329BD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9C7FD71A61C39000E329BD /* libz.dylib */; };
 		CCC0120F1A63EF8F00255052 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0120D1A63EF8F00255052 /* MenuCell.swift */; };
 		CCC012101A63EF8F00255052 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC0120E1A63EF8F00255052 /* MenuCell.xib */; };
+		CCCFB7651A68912500586652 /* MasterCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7641A68912500586652 /* MasterCopy.swift */; };
+		CCCFB7671A68919D00586652 /* SlideOutMenuCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
 		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
@@ -59,7 +61,7 @@
 
 /* Begin PBXFileReference section */
 		CC0982801A651140004E4BE0 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		CC0982821A651DD4004E4BE0 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		CC0982821A651DD4004E4BE0 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		CC0EB3F11A58C4E5001F9A2E /* Lifespice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifespice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0EB3F51A58C4E5001F9A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		CC9C7FD71A61C39000E329BD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CCC0120D1A63EF8F00255052 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		CCC0120E1A63EF8F00255052 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		CCCFB7641A68912500586652 /* MasterCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterCopy.swift; sourceTree = "<group>"; };
+		CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuCopy.swift; sourceTree = "<group>"; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
@@ -180,15 +184,17 @@
 				CCC0120E1A63EF8F00255052 /* MenuCell.xib */,
 				CC0EB41D1A58DD2E001F9A2E /* NewEventViewController.swift */,
 				CC8CCDAA1A63CAD40088840F /* SlideOutMenuViewController.swift */,
-				CC0982801A651140004E4BE0 /* ContainerViewController.swift */,
 				CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */,
 				CCD73A321A5E847F00CC6628 /* SetRepeatViewController.swift */,
 				CCD73A341A5E85C300CC6628 /* SetCategoryViewController.swift */,
 				CCD73A2C1A5E4B4300CC6628 /* Category.swift */,
-				CC0982821A651DD4004E4BE0 /* MenuModel.swift */,
+				CC0982821A651DD4004E4BE0 /* Menu.swift */,
 				CCF8C3DA1A5F864B002CEFAA /* Reminder.swift */,
 				CCF8C3DC1A5F8664002CEFAA /* Repeat.swift */,
 				CC199C3B1A60EC2D001ED886 /* Event.swift */,
+				CCCFB7641A68912500586652 /* MasterCopy.swift */,
+				CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */,
+				CC0982801A651140004E4BE0 /* ContainerViewController.swift */,
 				CCD73A2E1A5E4E5400CC6628 /* Enums.swift */,
 				CC0EB3FF1A58C4E5001F9A2E /* Main.storyboard */,
 				CC0EB4021A58C4E5001F9A2E /* Images.xcassets */,
@@ -333,12 +339,14 @@
 				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
 				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
+				CCCFB7651A68912500586652 /* MasterCopy.swift in Sources */,
 				CC199C3E1A610C2A001ED886 /* CustomCell.swift in Sources */,
 				CC0EB3FA1A58C4E5001F9A2E /* Lifespice.xcdatamodeld in Sources */,
 				CC8CCDAB1A63CAD40088840F /* SlideOutMenuViewController.swift in Sources */,
-				CC0982831A651DD4004E4BE0 /* MenuModel.swift in Sources */,
+				CC0982831A651DD4004E4BE0 /* Menu.swift in Sources */,
 				CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
+				CCCFB7671A68919D00586652 /* SlideOutMenuCopy.swift in Sources */,
 				CC8CCDA71A63C3610088840F /* TransitionOperator.swift in Sources */,
 				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
 				CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */,

@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-class MenuModel {
+@objc
+class Menu {
     var title : String!
     var icon : String!
     var count : String?
@@ -27,14 +27,14 @@ class MenuModel {
         self.icon = icon
         self.count = count
     }
-    class func allMenuItems() -> Array<MenuModel> {
-        var items: [MenuModel]!
-        let item1 = MenuModel(title: "Home", icon: "icon-home", count: "14")
-        let item2 = MenuModel(title: "Categories", icon: "icon-categories", count: "3")
-        let item3 = MenuModel(title: "Important", icon: "icon-important", count: "2")
-        let item4 = MenuModel(title: "Settings", icon: "icon-settings")
-        let item5 = MenuModel(title: "Help", icon: "icon-help")
-        let item6 = MenuModel(title: "Sign out", icon: "icon-signout")
+    class func allMenuItems() -> Array<Menu> {
+        var items: [Menu]!
+        let item1 = Menu(title: "Home", icon: "icon-home", count: "14")
+        let item2 = Menu(title: "Categories", icon: "icon-categories", count: "3")
+        let item3 = Menu(title: "Important", icon: "icon-important", count: "2")
+        let item4 = Menu(title: "Settings", icon: "icon-settings")
+        let item5 = Menu(title: "Help", icon: "icon-help")
+        let item6 = Menu(title: "Sign out", icon: "icon-signout")
         
         items = [item1, item2, item3, item4, item5, item6]
         return items

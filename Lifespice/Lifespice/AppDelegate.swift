@@ -25,12 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("96OpyFV4naAS9SMPNeXFnIye9HC7EOES8xiZHL94", clientKey: "9Q3LxqgNglVKGkP3goaon3KzJwdpfUTSrVBP9fLP")
-
-
-        
         let navigationController = self.window!.rootViewController as UINavigationController
         let controller = navigationController.topViewController as MasterViewController
         controller.managedObjectContext = self.managedObjectContext
+
+        
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+        
+        
+//        let containerViewController = ContainerViewController()
+//
+//        window!.rootViewController = containerViewController
+//        window!.makeKeyAndVisible()
         
         var navigationBarAppearace = UINavigationBar.appearance()
         

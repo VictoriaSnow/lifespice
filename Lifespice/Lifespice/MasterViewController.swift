@@ -9,23 +9,19 @@
 import UIKit
 import CoreData
 
-@objc
 
-protocol MasterViewControllerDelegate {
-    optional func toggleLeftPanel()
-    optional func collapseSidePanels()
-}
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, SlideOutMenuViewControllerDelegate {
+
+class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
-    var delegate: MasterViewControllerDelegate?
+
     
     var allData: NSArray? = nil
     var filteredData: NSArray? = nil
     var searchIsActive: Bool = false
 
-    @IBOutlet weak var menuItem: UIBarButtonItem!
+
     
     var transitionOperator = TransitionOperator()
     
@@ -60,6 +56,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     }
     
+
+
     
     func filter(searchText: NSString) {
         
@@ -74,11 +72,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     
-    @IBAction func menuTapped(sender: AnyObject) {
-        
-        
-        delegate?.toggleLeftPanel?()
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -94,12 +88,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.searchIsActive = false
         }
     
-    func itemSelected(menuItem: MenuModel) {
-        delegate?.collapseSidePanels?()
-        if (menuItem.title == "Important") {
-            self.filterImportant()
-        }
-    }
+
     
     func filterImportant() {
         var importantPredicate: NSPredicate = NSPredicate(format: "eventImportant == true")!
@@ -149,9 +138,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
 
-        let toViewController = segue.destinationViewController as UIViewController
-        self.modalPresentationStyle = UIModalPresentationStyle.Custom
-        toViewController.transitioningDelegate = self.transitionOperator
+//        let toViewController = segue.destinationViewController as UIViewController
+//        self.modalPresentationStyle = UIModalPresentationStyle.Custom
+//        toViewController.transitioningDelegate = self.transitionOperator
         
     }
     
