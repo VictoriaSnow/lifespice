@@ -10,12 +10,17 @@ import UIKit
 import CoreData
 
 
+@objc
+protocol MasterViewControllerDelegate {
+    optional func toggleSlideOutMenu()
+    //    optional func toggleRightPanel()
+    optional func collapseSidePanels()
+}
 
-
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate,SlideOutMenuViewControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
-
+    var delegate: MasterViewControllerDelegate?
 
     
 
@@ -59,7 +64,25 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     }
     
-
+    @IBAction func menuTapped(sender: AnyObject) {
+        println("begin toggle")
+        delegate?.toggleSlideOutMenu?()
+        println("toggled")
+    }
+    
+    
+    
+    func menuItemSelected(menuItem: Menu) {
+        //        imageView.image = animal.image
+        //        titleLabel.text = animal.title
+        //        creatorLabel.text = animal.creator
+        if(menuItem.title == "Settings") {
+            println("settings")
+            let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        delegate?.collapseSidePanels?()
+    }
 
     
     func filter(searchText: NSString) {
@@ -242,16 +265,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Fetched results controller
 
     var fetchedResultsController: NSFetchedResultsController {
-        let delegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let managedObjectContext: NSManagedObjectContext = delegate.managedObjectContext!
+        let delegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        managedObjectContext = delegate.managedObjectContext!
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-//        let fetchRequest = NSFetchRequest()
-        // Edit the entity name as appropriate.
-//        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
-//        fetchRequest.entity = entity
         let fetchRequest = NSFetchRequest(entityName: "Event")
         
         // Set the batch size to a suitable number.
@@ -263,11 +282,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-//        allData = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
+
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

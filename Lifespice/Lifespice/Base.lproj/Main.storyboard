@@ -108,6 +108,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="tQt-TN-PWz">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="slide" id="XXo-ps-H3G">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="menuTapped:" destination="pGg-6v-bdr" id="XVp-5i-e4e"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Se8-M0-DDv">
                             <rect key="frame" x="68" y="8" width="185" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -661,6 +667,7 @@
         <!--Settings View Controller-->
         <scene sceneID="Y75-rX-t99">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XER-fu-CPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="SettingsViewController" title="Settings View Controller" id="A2M-i7-dQe" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fgq-ZG-0dp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -696,7 +703,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XER-fu-CPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1803" y="741"/>
         </scene>
@@ -705,6 +711,7 @@
         <image name="Private@icon" width="60" height="61"/>
         <image name="compose" width="23" height="23"/>
         <image name="private" width="25" height="26"/>
+        <image name="slide" width="23" height="13"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

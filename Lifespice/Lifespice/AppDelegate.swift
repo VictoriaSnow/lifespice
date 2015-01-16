@@ -29,31 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let controller = navigationController.topViewController as MasterViewController
 //        controller.managedObjectContext = self.managedObjectContext
 
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
-        mainViewController.addLeftBarButtonWithImage(UIImage(named: "slide")!)
-//        mainViewController.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
-
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("SlideOutMenuViewController") as SlideOutMenuViewController
-        
-        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
-        
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        
-        // create viewController code...
-        
-        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-
-        self.window?.rootViewController = slideMenuController
-        self.window?.makeKeyAndVisible()
-//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-
-        
-        
-//        let containerViewController = ContainerViewController()
+//        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
+////        mainViewController.addLeftBarButtonWithImage(UIImage(named: "slide")!)
+//        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("SlideOutMenuViewController") as SlideOutMenuViewController
+//        
+//        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
+//        
+//        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+//        
 //
-//        window!.rootViewController = containerViewController
-//        window!.makeKeyAndVisible()
+//        
+//        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+//
+//        self.window?.rootViewController = slideMenuController
+//        self.window?.makeKeyAndVisible()
+
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let containerViewController = ContainerViewController()
+        
+        window!.rootViewController = containerViewController
+        window!.makeKeyAndVisible()
         
         var navigationBarAppearace = UINavigationBar.appearance()
         

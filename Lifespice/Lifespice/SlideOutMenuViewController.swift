@@ -11,6 +11,11 @@ import UIKit
 
 
 
+@objc
+protocol SlideOutMenuViewControllerDelegate {
+    func menuItemSelected(menuItem: Menu)
+}
+
 class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -20,8 +25,9 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var overlayView: UIView!
     
 
+    var delegate: SlideOutMenuViewControllerDelegate?
     
-    let menuItems = Menu.allMenuItems()
+    var menuItems: Array<Menu>!
 
     
     
@@ -53,7 +59,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 6
+        return menuItems.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -70,7 +76,11 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedMenuItem = menuItems[indexPath.row]
-
+        delegate?.menuItemSelected(selectedMenuItem)
+//        if(selectedMenuItem.title == "Settings") {
+//            let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
 
         dismissViewControllerAnimated(true, completion: nil)
     }
