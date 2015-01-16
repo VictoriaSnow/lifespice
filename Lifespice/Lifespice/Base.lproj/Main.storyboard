@@ -108,9 +108,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="tQt-TN-PWz">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="slide" id="MG2-gx-mWo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Se8-M0-DDv">
                             <rect key="frame" x="68" y="8" width="185" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -661,10 +658,10 @@
             </objects>
             <point key="canvasLocation" x="1436" y="741"/>
         </scene>
-        <!--Two View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Y75-rX-t99">
             <objects>
-                <tableViewController storyboardIdentifier="TwoViewController" title="Two View Controller" id="A2M-i7-dQe" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsViewController" title="Settings View Controller" id="A2M-i7-dQe" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fgq-ZG-0dp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -708,7 +705,6 @@
         <image name="Private@icon" width="60" height="61"/>
         <image name="compose" width="23" height="23"/>
         <image name="private" width="25" height="26"/>
-        <image name="slide" width="23" height="13"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

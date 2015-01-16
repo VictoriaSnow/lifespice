@@ -25,11 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("96OpyFV4naAS9SMPNeXFnIye9HC7EOES8xiZHL94", clientKey: "9Q3LxqgNglVKGkP3goaon3KzJwdpfUTSrVBP9fLP")
-        let navigationController = self.window!.rootViewController as UINavigationController
-        let controller = navigationController.topViewController as MasterViewController
-        controller.managedObjectContext = self.managedObjectContext
+//        let navigationController = self.window!.rootViewController as UINavigationController
+//        let controller = navigationController.topViewController as MasterViewController
+//        controller.managedObjectContext = self.managedObjectContext
 
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
+        mainViewController.addLeftBarButtonWithImage(UIImage(named: "slide")!)
+//        mainViewController.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("SlideOutMenuViewController") as SlideOutMenuViewController
         
+        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        // create viewController code...
+        
+        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
 //        window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         

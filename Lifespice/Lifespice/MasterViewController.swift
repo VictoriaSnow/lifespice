@@ -16,6 +16,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var managedObjectContext: NSManagedObjectContext? = nil
 
+
+    
+
     
     var allData: NSArray? = nil
     var filteredData: NSArray? = nil
@@ -239,14 +242,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Fetched results controller
 
     var fetchedResultsController: NSFetchedResultsController {
+        let delegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let managedObjectContext: NSManagedObjectContext = delegate.managedObjectContext!
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest = NSFetchRequest()
+//        let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
-        fetchRequest.entity = entity
+//        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+//        fetchRequest.entity = entity
+        let fetchRequest = NSFetchRequest(entityName: "Event")
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
@@ -261,7 +267,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

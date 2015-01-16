@@ -40,6 +40,8 @@
 		CCC012101A63EF8F00255052 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC0120E1A63EF8F00255052 /* MenuCell.xib */; };
 		CCCFB7651A68912500586652 /* MasterCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7641A68912500586652 /* MasterCopy.swift */; };
 		CCCFB7671A68919D00586652 /* SlideOutMenuCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */; };
+		CCCFB7721A68C26B00586652 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7711A68C26B00586652 /* SettingsViewController.swift */; };
+		CCCFB7741A68C2A900586652 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFB7731A68C2A900586652 /* SlideMenuController.swift */; };
 		CCD73A2D1A5E4B4300CC6628 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2C1A5E4B4300CC6628 /* Category.swift */; };
 		CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A2E1A5E4E5400CC6628 /* Enums.swift */; };
 		CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */; };
@@ -98,6 +100,8 @@
 		CCC0120E1A63EF8F00255052 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		CCCFB7641A68912500586652 /* MasterCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterCopy.swift; sourceTree = "<group>"; };
 		CCCFB7661A68919D00586652 /* SlideOutMenuCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuCopy.swift; sourceTree = "<group>"; };
+		CCCFB7711A68C26B00586652 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CCCFB7731A68C2A900586652 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		CCD73A2C1A5E4B4300CC6628 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCD73A2E1A5E4E5400CC6628 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CCD73A301A5E844700CC6628 /* SetReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			children = (
 				CCF8C3D91A5F81A2002CEFAA /* AppPlayground.playground */,
 				CC0EB3F61A58C4E5001F9A2E /* AppDelegate.swift */,
+				CCCFB7731A68C2A900586652 /* SlideMenuController.swift */,
+				CCCFB7711A68C26B00586652 /* SettingsViewController.swift */,
 				CC0EB3FB1A58C4E5001F9A2E /* MasterViewController.swift */,
 				CC0EB3FD1A58C4E5001F9A2E /* DetailViewController.swift */,
 				CC8CCDA61A63C3610088840F /* TransitionOperator.swift */,
@@ -337,6 +343,7 @@
 				CCF8C3DB1A5F864B002CEFAA /* Reminder.swift in Sources */,
 				CCC0120F1A63EF8F00255052 /* MenuCell.swift in Sources */,
 				CCD73A351A5E85C300CC6628 /* SetCategoryViewController.swift in Sources */,
+				CCCFB7741A68C2A900586652 /* SlideMenuController.swift in Sources */,
 				CCD73A311A5E844700CC6628 /* SetReminderViewController.swift in Sources */,
 				CCD73A2F1A5E4E5400CC6628 /* Enums.swift in Sources */,
 				CCCFB7651A68912500586652 /* MasterCopy.swift in Sources */,
@@ -346,6 +353,7 @@
 				CC0982831A651DD4004E4BE0 /* Menu.swift in Sources */,
 				CC199C3C1A60EC2D001ED886 /* Event.swift in Sources */,
 				CC0EB3F71A58C4E5001F9A2E /* AppDelegate.swift in Sources */,
+				CCCFB7721A68C26B00586652 /* SettingsViewController.swift in Sources */,
 				CCCFB7671A68919D00586652 /* SlideOutMenuCopy.swift in Sources */,
 				CC8CCDA71A63C3610088840F /* TransitionOperator.swift in Sources */,
 				CCF8C3DD1A5F8664002CEFAA /* Repeat.swift in Sources */,
