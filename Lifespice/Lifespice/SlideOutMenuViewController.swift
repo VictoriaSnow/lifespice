@@ -27,7 +27,8 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
 
     var delegate: SlideOutMenuViewControllerDelegate?
     
-    var menuItems: Array<Menu>!
+//    var menuItems: Array<Menu>!
+    var menuItems = Menu.allMenuItems()
 
     
     

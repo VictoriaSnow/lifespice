@@ -44,14 +44,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.awakeFromNib()
     }
 
-
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
+        self.tabBarController?.tabBar.tintColor = uicolorFromHex(0x81C6D8)
+
         self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
         
-        self.tableView.rowHeight = 60
+        
+        self.tableView.rowHeight = 61
         self.tableView.contentOffset = CGPointMake(0, self.searchBar.frame.size.height)
         allData = fetchedResultsController.fetchedObjects
         self.searchDisplayController?.searchResultsTableView.registerClass(CustomCell.self, forCellReuseIdentifier: "Cell")
@@ -161,7 +171,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //        }
         if segue.identifier == "showDetail" {
             var destination: DetailViewController = segue.destinationViewController as DetailViewController
-            
+
             if (searchIsActive) {
                 if let indexPath = searchDisplayController?.searchResultsTableView.indexPathForSelectedRow() {
                     let event = self.filteredData!.objectAtIndex(indexPath.row) as Event
@@ -176,6 +186,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 
             }
         }
+
 
 //        let toViewController = segue.destinationViewController as UIViewController
 //        self.modalPresentationStyle = UIModalPresentationStyle.Custom
@@ -234,7 +245,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
+        return 61
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

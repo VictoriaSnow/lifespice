@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetCategoryViewController: MasterViewController {
+class SetCategoryViewController: UITableViewController {
 
     
     let categories = Category.allCategories()

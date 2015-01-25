@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        var storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
-////        mainViewController.addLeftBarButtonWithImage(UIImage(named: "slide")!)
+//        mainViewController.addLeftBarButtonWithImage(UIImage(named: "slide")!)
 //        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("SlideOutMenuViewController") as SlideOutMenuViewController
 //        
 //        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("MasterViewController") as MasterViewController
@@ -45,21 +45,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window?.rootViewController = slideMenuController
 //        self.window?.makeKeyAndVisible()
 
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        
+//        let containerViewController = ContainerViewController()
+//        
+//        window!.rootViewController = containerViewController
+//        window!.makeKeyAndVisible()
         
-        let containerViewController = ContainerViewController()
-        
-        window!.rootViewController = containerViewController
-        window!.makeKeyAndVisible()
-        
-        var navigationBarAppearace = UINavigationBar.appearance()
-        
-        navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)
-        navigationBarAppearace.barTintColor = uicolorFromHex(0x81C6D8)
-        navigationBarAppearace.titleTextAttributes =
-            [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
+//        var navigationBarAppearace = UINavigationBar.appearance()
+//        
+//        navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)
+//        navigationBarAppearace.barTintColor = uicolorFromHex(0x81C6D8)
+//        navigationBarAppearace.titleTextAttributes =
+//            [NSForegroundColorAttributeName:UIColor.whiteColor()]
+//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+
         return true
     }
 
